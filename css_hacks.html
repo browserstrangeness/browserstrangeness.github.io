@@ -1329,16 +1329,13 @@ if (ff22upjs) document.write("<style type='text/css'> .ff22upjs { background-col
 <div class="wide_styled_block" style="text-align:left;">
 <h1>browser strangeness</h1>
 
-<br />
-
-	<div style="text-align:center">Mirrors: <a style="font-weight:bold" href="https://browserstrangeness.github.io/css_hacks.html">browserstrangeness.github.io/css_hacks.html</a> & 
-	<a style="font-weight:bold" href="https://browserstrangeness.bitbucket.org/css_hacks.html">browserstrangeness.bitbucket.org/css_hacks.html</a></div>
-
-<p style="padding:0px;padding-left:20px;padding-right:20px;font-weight:bold;"><center>*** Updated for Microsoft Edge and Safari 10 ***</center>
+<p style="padding:0px;padding-left:20px;padding-right:20px;font-weight:bold;"><center>
+*** Updated for Microsoft Edge and Safari 10.1 ***
+</center>
 <br /><br />
  This is my public LIVE browser test page for my own CSS hack
   contributions to the universe. If you are new to web development...
- These are quick-fixes for browser-specific bugs, not anything to do with illegal activity. Let me reiterate that: <strong style="color:#FF0000">THIS IS NOT A SITE ABOUT HACKING BUT A WEB BROWSER REPAIR PAGE!</strong> If you use them, remember that CSS Hacks are bandaids,
+ These are quick-fixes for browser-specific bugs, not anything to do with illegal activity. If you use them, remember that CSS Hacks are bandaids,
  temporary fixes ONLY!
  Recently I was asked how I find these: examine browser source code where available, read developer notes for Chrome, Firefox and IE/Edge,
  test... a lot! Why do I do this? Because it is a fun hobby and I like puzzles. You will see a bit of my work and testing at
@@ -1363,24 +1360,18 @@ It is always better to use good css before resorting to css hack workarounds, bu
 --Jeff Clayton [ tech blog: <a href='https://jeffclayton.wordpress.com'>jeffclayton.wordpress.com</a> ]
 <br />
 <br />
-<div class="base_grayed_out saf61up" style="float:right;">
+<div class="base_grayed_out s8" style="float:right;">
 
 <span style="float:right;"><a href='https://jeffclayton.wordpress.com'>
-<img src='./images/jeff_thumb.png' border=0 class="largescreen" style="float:right;-webkit-border-radius:6px;-moz-border-radius:6x;-khtml-border-radius:6px;border-radius:6px;" /></a></span>
+<img src='https://browserstrangeness.bitbucket.org/images/jeff_thumb.png' border=0 class="largescreen" style="float:right;-webkit-border-radius:6px;-moz-border-radius:6x;-khtml-border-radius:6px;border-radius:6px;" /></a></span>
 
 <span class="smallscreen" style="margin-right:20px;float:right;">
 <pre style="font-size:12px;">
-/* My Safari 6.1+ CSS Hack (Formatted Example) */
+/* My Safari 7.1+ CSS Hack (Formatted Example) */
 
-@media screen and (min-color-index:0) 
-and(-webkit-min-device-pixel-ratio:0) { @media {
-    .safari_only { 
-
-        color:#0000FF; 
-        background-color:#CCCCCC; 
-
-    }
-}}
+_::-webkit-full-page-media, _:future, :root .selector {
+   property:value; 
+}
 
 Author: Jeff Clayton
 </pre>
@@ -2714,7 +2705,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out noniossaf10up">_::-webkit-:-webkit-full-screen:host:not(:root:root), .selector { property:value; }</div>
-		<div class="base_targets">Safari 10+ (Not iOS)</div>
+		<div class="base_targets">Safari 10.0 (Not iOS)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -2738,7 +2729,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out noniossaf61up">@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media { _:-webkit-full-screen, .selector { property:value; } } }</div>
-		<div class="base_targets">Safari 6.1+ (Not iOS)</div>
+		<div class="base_targets">Safari 6.1-10.0 (Not iOS)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -2754,13 +2745,13 @@ Author: Jeff Clayton
 	
 	<div class="styled_block">
 		<div class="base_grayed_out saf10up">_::-webkit-:host:not(:root:root), .selector { property:value; }</div>
-		<div class="base_targets">Safari 10+</div>
+		<div class="base_targets">Safari 10.0</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
 		<div class="base_grayed_out saf9up">_::-webkit-:not(:root:root), .selector { property:value; }</div>
-		<div class="base_targets">Safari 9+</div>
+		<div class="base_targets">Safari 9.0-10.0</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -2772,7 +2763,7 @@ Author: Jeff Clayton
 	
 	<div class="styled_block">
 		<div class="base_grayed_out saf61up">@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media { .selector { property:value; } } }</div>
-		<div class="base_targets">Safari 6.1+</div>
+		<div class="base_targets">Safari 6.1-10.0</div>
 		<div class="base_credits">The Safari 6.1+ Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
