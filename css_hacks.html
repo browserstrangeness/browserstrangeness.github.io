@@ -550,6 +550,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Firefox 8 (Separated from Firefox 9+) */
 @media screen and (min--moz-device-pixel-ratio:0) and (min-resolution:.001dpcm) { .ff8R9 { background-color:#800;color:#fff; } _:-moz-full-screen, :root .ff8R9 { background-color:#aaa;color:#fff; } }
 
+/* Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) { @media { .saf10_1up { background-color:#800;color:#fff; } } }
+
 /* Safari 9 iOS Only */
 @supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) { .IOSs9 { background-color:#800;color:#fff; } }
 
@@ -1086,10 +1089,10 @@ _::-webkit-seamless-document, _:unresolved, :root .c34bup { background-color:#80
 _::-webkit-seamless-document, _:future, :root .s6_1c34up { background-color:#800;color:#fff; }
 
 /* Safari 10+ / Not iOS */
-_::-webkit-:-webkit-full-screen:host:not(:root:root), .noniossaf10up { background-color:#800;color:#fff; }
+_::-webkit-:-webkit-full-screen:host:not(:root:root), .noniossaf10 { background-color:#800;color:#fff; }
 
 /* Safari 10+ */
-_::-webkit-:host:not(:root:root), .saf10up { background-color:#800;color:#fff; }
+_::-webkit-:host:not(:root:root), .saf10 { background-color:#800;color:#fff; }
 
 /* Safari 9+ / Not iOS */
 _:-webkit-full-screen:not(:root:root), .noniossaf9up { background-color:#800;color:#fff; }
@@ -2704,7 +2707,7 @@ Author: Jeff Clayton
 	</div>    
 
 	<div class="styled_block">
-		<div class="base_grayed_out noniossaf10up">_::-webkit-:-webkit-full-screen:host:not(:root:root), .selector { property:value; }</div>
+		<div class="base_grayed_out noniossaf10">_::-webkit-:-webkit-full-screen:host:not(:root:root), .selector { property:value; }</div>
 		<div class="base_targets">Safari 10.0 (Not iOS)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
@@ -2744,7 +2747,13 @@ Author: Jeff Clayton
 <h2 id="safari" style='clear:both;float:none;padding-top:20px;'>- Safari-Only CSS -</h2><br>
 	
 	<div class="styled_block">
-		<div class="base_grayed_out saf10up">_::-webkit-:host:not(:root:root), .selector { property:value; }</div>
+		<div class="base_grayed_out saf10_1up">@media not all and (min-resolution:.001dpcm) { @media { .selector { property:value; } } }</div>
+		<div class="base_targets">Safari 10.1+</div>
+		<div class="base_credits">Safari 10.1+ Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out saf10">_::-webkit-:host:not(:root:root), .selector { property:value; }</div>
 		<div class="base_targets">Safari 10.0</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
