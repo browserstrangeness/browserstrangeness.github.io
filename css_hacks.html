@@ -259,6 +259,9 @@ h3 {
 /* Anything BUT the Microsoft Edge Browser or Internet Explorer (Safari 9+, Chrome 28+. Firefox 22+) */
 @supports (not (-ms-ime-align:auto)) { .notedge { background-color:#800;color:#fff; } }
 
+/* Edge Browser 14+ */
+@supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .msedge14up { background-color:#800;color:#fff; } }
+
 /* Edge Browser 13+ */
 @supports (-ms-ime-align:auto) and (color:unset) { .msedge13up { background-color:#800;color:#fff; } }
 
@@ -1422,6 +1425,12 @@ Author: Jeff Clayton
 
 <h2 style='clear:both;float:none;padding-top:10px;'>By Version</h2><br>
 	
+	<div class="styled_block">
+		<div class="base_grayed_out msedge14up">@supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge Browser 14+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
 	<div class="styled_block">
 		<div class="base_grayed_out msedge13up">@supports (-ms-ime-align:auto) and (color:unset) { .selector { property:value; } }</div>
 		<div class="base_targets">Microsoft Edge Browser 13+</div>
