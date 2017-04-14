@@ -259,9 +259,18 @@ h3 {
 /* Anything BUT the Microsoft Edge Browser or Internet Explorer (Safari 9+, Chrome 28+. Firefox 22+) */
 @supports (not (-ms-ime-align:auto)) { .notedge { background-color:#800;color:#fff; } }
 
+/* Edge Browser 15+ */
+@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) { .msedge15up { background-color:#800;color:#fff; } }
+	
 /* Edge Browser 14+ */
 @supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .msedge14up { background-color:#800;color:#fff; } }
 
+/* Edge Browser 14 */
+@supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) and (not (-webkit-text-stroke:initial)) { .msedge14 { background-color:#800;color:#fff; } }
+	
+/* Edge Browser 14- */
+@supports (-ms-ime-align:auto) and (not (-webkit-text-stroke:initial)) { .msedge14dn { background-color:#800;color:#fff; } }
+	
 /* Edge Browser 13+ */
 @supports (-ms-ime-align:auto) and (color:unset) { .msedge13up { background-color:#800;color:#fff; } }
 
@@ -582,6 +591,7 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 
 /* Chrome 22-28 */
 @media screen and(-webkit-min-device-pixel-ratio:0) { .c22-28 {-chrome-:only(;  background-color:#800;color:#fff; );} }
+
 
 /* Chrome 22+, Safari 6.1+ [webkit 537.17+,+] */
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm), screen and(-webkit-min-device-pixel-ratio:0) { .c22up { background-color:#800;color:#fff; } }
@@ -1426,8 +1436,26 @@ Author: Jeff Clayton
 <h2 style='clear:both;float:none;padding-top:10px;'>By Version</h2><br>
 	
 	<div class="styled_block">
+		<div class="base_grayed_out msedge15up">@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 15+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
 		<div class="base_grayed_out msedge14up">@supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
 		<div class="base_targets">Microsoft Edge 14+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge14">@supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) and (not (-webkit-text-stroke:initial)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 14</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge14dn">@supports (-ms-ime-align:auto) and (not (-webkit-text-stroke:initial)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 14-</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1457,7 +1485,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12-13">@supports (-ms-accelerator:true) { .selector { property:value; } }</div>
-		<div class="base_targets">Microsoft Edge 12-13 (Edge 13-)</div>
+		<div class="base_targets">Microsoft Edge 13-</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1612,6 +1640,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out msie8up">.selector { property:value\0; }</div>
+
 		<div class="base_targets">Internet Explorer 8-11 (and old Firefox 1.x)</div>
 		<div class="base_credits">Source: <a href="https://mynthon.net/howto/-/webdev/CSS-big-list-of-css-hacks.txt" target="_blank">Big List of CSS Hacks</a></div>
 	</div>
