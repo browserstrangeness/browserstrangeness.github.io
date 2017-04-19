@@ -566,7 +566,7 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 @media not all and (min-resolution:.001dpcm) { @media { .saf10_1up { background-color:#800;color:#fff; } } }
 
 /* Safari 9 iOS Only */
-@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) { .IOSs9 { background-color:#800;color:#fff; } }
+@supports (overflow:-webkit-marquee) and (-webkit-text-size-adjust:none) and (justify-content:inherit){ .IOSs9 { background-color:#800;color:#fff; } }
 
 /* Safari 9 */
 @supports (overflow:-webkit-marquee) and (justify-content:inherit) { .s9 { background-color:#800;color:#fff; } }
@@ -2751,7 +2751,7 @@ Author: Jeff Clayton
 	</div>
 
 	<div class="styled_block">
-		<div class="base_grayed_out IOSs9">@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) { .selector { property:value; } }</div>
+		<div class="base_grayed_out IOSs9">@supports (overflow:-webkit-marquee) and (-webkit-text-size-adjust:none) and (justify-content:inherit) { .selector { property:value; } }</div>
 		<div class="base_targets">Safari 9 (iOS Only)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
