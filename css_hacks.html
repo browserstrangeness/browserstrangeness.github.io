@@ -314,7 +314,10 @@ _css-text, .noie6dn { background-color:#800;color:#fff; }
 _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 
 /* Firefox 49+ (Mac Only - OS X 10.9 Mavericks and up) */
-@media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .ff49macup { background-color:#800;color:#fff; } } }
+@supports (-moz-osx-font-smoothing:auto) and (text-align-last:auto) { .ff49macup { background-color:#800;color:#fff; } }
+
+/* Firefox 49+ (Mac Only - OS X 10.9 Mavericks and up - alternate method) */
+@media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .ff49macupalt { background-color:#800;color:#fff; } } }
 
 /* Firefox 47+ */
 @media (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen) { .ff47mup { background-color:#800;color:#fff; } }
@@ -331,8 +334,8 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 /* Firefox 25+ (Mac Only - OS X 10.6 Snow Leopard and up) */
 @supports (-moz-osx-font-smoothing:auto) { .ff25macup { background-color:#800;color:#fff; } }
 
-/* Firefox 24+ (Mac Only - OS X 10.6 Only) */
-@supports (-moz-osx-font-smoothing:auto) { @media not all and (-moz-overlay-scrollbars) { .ff24macsnowy { background-color:#800;color:#fff; } } }
+/* Firefox 24+ (Mac Only - OS X 10.6 Only) - needs more testing */
+@supports (-moz-osx-font-smoothing:auto) { @media not print and (-moz-overlay-scrollbars) { .ff24macsnowy { background-color:#800;color:#fff; } } }
 
 /* Firefox 25+ (Not Mac OS X) */
 @supports (-moz-appearance:none) and (background-attachment:local) and (not (-moz-osx-font-smoothing:auto)) { .nonmacff25up { background-color:#800;color:#fff; } }
@@ -1792,13 +1795,15 @@ Author: Jeff Clayton
 		<div class="base_targets">Mac OS X 10.6 Snow Leopard and up (Firefox 25+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
-    
+	
+    <!--
 	<div class="styled_block">
-		<div class="base_grayed_out ff24macsnowy">@supports (-moz-osx-font-smoothing:auto) { @media not all and (-moz-overlay-scrollbars) { .selector { property:value; } } }</div>
-		<div class="base_targets">Mac OS X 10.6 Snow Leopard Only (Firefox 24+)</div>
+		<div class="base_grayed_out ff24macsnowy">@supports (-moz-osx-font-smoothing:auto) { @media not print and (-moz-overlay-scrollbars) { .selector { property:value; } } }</div>
+		<div class="base_targets">Mac OS X 10.6 Snow Leopard Only (Firefox 24+) NEEDS MORE TESTING</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
-    
+   //--> 
+   
 	<div class="styled_block">
 		<div class="base_grayed_out ff24macup">@media screen and (-moz-overlay-scrollbars) { .selector { property:value; } }</div>
 		<div class="base_targets">Mac OS X 10.7 Lion and up (Firefox 24+)</div>
@@ -1806,7 +1811,7 @@ Author: Jeff Clayton
 	</div>
 	
 	<div class="styled_block">
-		<div class="base_grayed_out ff49macup">@media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .selector { property:value; } } }</div>
+		<div class="base_grayed_out ff49macup">@supports (-moz-osx-font-smoothing:auto) and (text-align-last:auto) { .selector { property:value; } }</div>
 		<div class="base_targets">Mac OS X 10.9 Mavericks and up (Firefox 49+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
@@ -2621,6 +2626,12 @@ Author: Jeff Clayton
 	</div>
 	
 	//-->
+	
+	<div class="styled_block">
+		<div class="base_grayed_out ff49macupalt">@media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .selector { property:value; } } }</div>
+		<div class="base_targets">Mac OS X 10.9 Mavericks and up (Firefox 49+) Alternate Method</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
 	
 	<div class="styled_block">
 		<div class="base_grayed_out ff33up">@supports (-moz-appearance:none) and (list-style-type:disclosure-open) { .selector { property:value; } }</div>
