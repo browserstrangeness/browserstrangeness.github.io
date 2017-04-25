@@ -313,6 +313,9 @@ _css-text, .noie6dn { background-color:#800;color:#fff; }
 /* Anything But Internet Explorer 7- */
 _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 
+/* Firefox 49+ (Mac Only - OS X 10.9 Mavericks and up) */
+@media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .ff49macup { background-color:#800;color:#fff; } } }
+
 /* Firefox 47+ */
 @media (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen) { .ff47mup { background-color:#800;color:#fff; } }
 
@@ -566,8 +569,8 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 @media not all and (min-resolution:.001dpcm) { @media { .saf10_1up { background-color:#800;color:#fff; } } }
 
 /* Safari 9 iOS Only */
-@supports (overflow:-webkit-marquee) and (-webkit-text-size-adjust:none) and (justify-content:inherit){ .IOSs9 { background-color:#800;color:#fff; } }
-
+@supports (overflow:-webkit-marquee) and (-webkit-text-size-adjust:none) and (justify-content:inherit) { .IOSs9 { background-color:#800;color:#fff; } }
+		
 /* Safari 9 */
 @supports (overflow:-webkit-marquee) and (justify-content:inherit) { .s9 { background-color:#800;color:#fff; } }
 
@@ -1799,6 +1802,12 @@ Author: Jeff Clayton
 	<div class="styled_block">
 		<div class="base_grayed_out ff24macup">@media screen and (-moz-overlay-scrollbars) { .selector { property:value; } }</div>
 		<div class="base_targets">Mac OS X 10.7 Lion and up (Firefox 24+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
+	<div class="styled_block">
+		<div class="base_grayed_out ff49macup">@media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .selector { property:value; } } }</div>
+		<div class="base_targets">Mac OS X 10.9 Mavericks and up (Firefox 49+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 	
