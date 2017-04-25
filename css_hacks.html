@@ -328,7 +328,7 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 /* Firefox 47+ test */
 @media screen and (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen),(display-mode:standalone),(display-mode:minimal-ui),(display-mode:browser) { .ff47mupb { background-color:#800;color:#fff; } }
 
-/* Firefox 24+ (Mac Only - OS X 10.7 Lion and up) */
+/* Firefox 24+ (Mac Only - OS X 10.8 Yosemite and up) */
 @media screen and (-moz-overlay-scrollbars) { .ff24macup { background-color:#800;color:#fff; } }
 
 /* Firefox 25+ (Mac Only - OS X 10.6 Snow Leopard and up) */
@@ -336,6 +336,12 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 
 /* Firefox 24+ (Mac Only - OS X 10.6 Only) - needs more testing */
 @supports (-moz-osx-font-smoothing:auto) { @media not print and (-moz-overlay-scrollbars) { .ff24macsnowy { background-color:#800;color:#fff; } } }
+
+/* Firefox 25+ (Mac Only - OS X 10-6-10.8 Snow Leopard - Yosemite) */
+@supports (-moz-osx-font-smoothing:auto) and (not (text-align-last:auto)) { .ff25upmac6-8 { background-color:#800;color:#fff; } }
+
+/* Firefox 25+ (Mac Only - OS X 10.8 Yosemite) */
+@media screen and (-moz-overlay-scrollbars) { @supports (not (text-align-last:auto)) { .ff24upmac8 { background-color:#800;color:#fff; } } }
 
 /* Firefox 25+ (Not Mac OS X) */
 @supports (-moz-appearance:none) and (background-attachment:local) and (not (-moz-osx-font-smoothing:auto)) { .nonmacff25up { background-color:#800;color:#fff; } }
@@ -1806,13 +1812,25 @@ Author: Jeff Clayton
    
 	<div class="styled_block">
 		<div class="base_grayed_out ff24macup">@media screen and (-moz-overlay-scrollbars) { .selector { property:value; } }</div>
-		<div class="base_targets">Mac OS X 10.7 Lion and up (Firefox 24+)</div>
+		<div class="base_targets">Mac OS X 10.8 Yosemite and up (Firefox 24+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 	
 	<div class="styled_block">
 		<div class="base_grayed_out ff49macup">@supports (-moz-osx-font-smoothing:auto) and (text-align-last:auto) { .selector { property:value; } }</div>
 		<div class="base_targets">Mac OS X 10.9 Mavericks and up (Firefox 49+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
+	<div class="styled_block">
+		<div class="base_grayed_out ff25upmac6-8">@supports (-moz-osx-font-smoothing:auto) and (not (text-align-last:auto)) { .selector { property:value; } }</div>
+		<div class="base_targets">Mac OS X 10.6 Snow Leopard - 10.8 Yosemite (Firefox 25+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
+	<div class="styled_block">
+		<div class="base_grayed_out ff24upmac8">@media screen and (-moz-overlay-scrollbars) { @supports (not (text-align-last:auto)) { .selector { property:value; } } }</div>
+		<div class="base_targets">Mac OS X 10.8 Yosemite (Firefox 24+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 	
