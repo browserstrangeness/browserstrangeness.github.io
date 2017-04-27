@@ -293,7 +293,7 @@ h3 {
 @media screen and (-moz-windows-theme) { @media (not screen and (-moz-os-version:windows-xp)), (not screen and (-moz-os-version:windows-vista)) { .winffsevenup  { background-color:#800;color:#fff; } } }
 
 /* Firefox 4+ (Windows vista and above) */
-@media screen and (-moz-windows-theme) { @media not screen and (-moz-os-version:windows-xp) { .winffvistaup  { background-color:#800;color:#fff; } } }
+@media screen and (-moz-windows-theme) { @media not -moz-os-version:windows-xp { .winffvistaup  { background-color:#800;color:#fff; } } }
  
 /* Firefox 4+ (Windows Only) */
 @media screen and (-moz-windows-theme) { .winff4up  { background-color:#800;color:#fff; } }
@@ -1917,7 +1917,7 @@ Author: Jeff Clayton
 	</div>
 
 	<div class="styled_block">
-		<div class="base_grayed_out winffvistaup">@media screen and (-moz-windows-theme) { @media not screen and (-moz-os-version:windows-xp) { .selector { property:value; } } }</div>
+		<div class="base_grayed_out winffvistaup">@media screen and (-moz-windows-theme) { @media not -moz-os-version:windows-xp { .selector { property:value; } } }</div>
 		<div class="base_targets">Windows Vista+ (Firefox 25+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
