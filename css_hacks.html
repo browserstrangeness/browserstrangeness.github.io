@@ -295,6 +295,15 @@ h3 {
 /* Firefox 25+ (Windows vista and above) */
 @media screen and (-moz-os-version:windows-vista), screen and (-moz-os-version:windows-win7), screen and (-moz-os-version:windows-win8), screen and (-moz-os-version:windows-win10) { .winffvistaup  { background-color:#800;color:#fff; } }
  
+/* Firefox 25+ (Windows 8 and below) */
+@media screen and (-moz-os-version:windows-xp), screen and (-moz-os-version:windows-vista), screen and (-moz-os-version:windows-win7), screen and (-moz-os-version:windows-win8) { .winffeightdn  { background-color:#800;color:#fff; } }
+
+/* Firefox 25+ (Windows 7 and below) */
+@media screen and (-moz-os-version:windows-xp), screen and (-moz-os-version:windows-vista), screen and (-moz-os-version:windows-win7) { .winffsevendn  { background-color:#800;color:#fff; } }
+
+/* Firefox 25+ (Windows vista and below) */
+@media screen and (-moz-os-version:windows-xp), screen and (-moz-os-version:windows-vista) { .winffvistadn  { background-color:#800;color:#fff; } }
+
 /* Firefox 4+ (Windows Only) */
 @media screen and (-moz-windows-theme) { .winff4up  { background-color:#800;color:#fff; } }
  
@@ -1919,6 +1928,24 @@ Author: Jeff Clayton
 	<div class="styled_block">
 		<div class="base_grayed_out winffvistaup">@media screen and (-moz-os-version:windows-vista), screen and (-moz-os-version:windows-win7), screen and (-moz-os-version:windows-win8), screen and (-moz-os-version:windows-win10) { .selector { property:value; } }</div>
 		<div class="base_targets">Windows Vista+ (Firefox 25+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out winffeightdn">@media screen and (-moz-os-version:windows-xp), screen and (-moz-os-version:windows-vista), screen and (-moz-os-version:windows-win7), screen and (-moz-os-version:windows-win8) { .selector { property:value; } }</div>
+		<div class="base_targets">Windows 8- (Firefox 25+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out winffsevendn">@media screen and (-moz-os-version:windows-xp), screen and (-moz-os-version:windows-vista), screen and (-moz-os-version:windows-win7) { .selector { property:value; } }</div>
+		<div class="base_targets">Windows 7- (Firefox 25+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out winffvistadn">@media screen and (-moz-os-version:windows-xp), screen and (-moz-os-version:windows-vista) { .selector { property:value; } }</div>
+		<div class="base_targets">Windows Vista- (Firefox 25+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
