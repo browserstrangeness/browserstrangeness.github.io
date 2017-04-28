@@ -259,6 +259,9 @@ h3 {
 /* Anything BUT the Microsoft Edge Browser or Internet Explorer (Safari 9+, Chrome 28+. Firefox 22+) */
 @supports (not (-ms-ime-align:auto)) { .notedge { background-color:#800;color:#fff; } }
 
+/* Edge 15+ Variables */
+@supports (-moz-appearance:none) { .msedgevars15up { --msedgevars15up-item_1:#800; background-color:var(--msedgevars15up-item_1); --msedgevars15up-item_2:#fff; color:var(--msedgevars15up-item_2); } }
+
 /* Edge Browser 15+ */
 @supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) { .msedge15up { background-color:#800;color:#fff; } }
 	
@@ -517,9 +520,9 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 /* Firefox 30-31 */
 @supports (-moz-background-inline-policy:continuous) and (background-blend-mode:difference,normal) { .ff30-31 { background-color:#800;color:#fff; } }
 
-/* Firefox 31+ */
+/* Firefox 31+ Variables */
 @supports (-moz-appearance:none) { .ff31sup { --ff31sup-item_1:#800; background-color:var(--ff31sup-item_1); --ff31sup-item_2:#fff; color:var(--ff31sup-item_2); } }
-
+	
 /* Firefox 31 */
 @supports (-moz-background-inline-policy:continuous) { .ff31 { --ff31-item_1:#800; background-color:var(--ff31-item_1); --ff31-item_2:#fff; color:var(--ff31-item_2); } }
 
@@ -1552,6 +1555,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
     
+	<div class="styled_block">
+		<div class="base_grayed_out msedgevars15up">@supports (-ms-ime-align:auto) { .selector { --this-variable:value; property:var(--this-variable); } }</div>
+		<div class="base_targets">Microsoft Edge 15+ (CSS3 Variable Method)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
 <h2 id="msie" style='clear:both;float:none;padding-top:20px;'>-: Internet Explorer CSS :-</h2><br>
 	
 <h2 style='clear:both;float:none;padding-top:0px;'>Special Purpose</h2><br>
