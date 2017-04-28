@@ -1,0 +1,13 @@
+
+body { /* also affects other browsers */
+	/*color:blue;*/
+}
+
+/* This requires a pair of chained external style sheets on a server that has ability to handle ssl connections */
+/* This stylesheet loaded as http:// in an @import command from a stylesheet loaded as https:// */
+
+@supports (-moz-appearance:none) and (display:flex) { .ff23upvia_embedded_nonssl { background-color:#aaa; color:#fff; } }
+
+@supports (-moz-appearance:none) and (not (cursor:zoom-in)) { .ff23via_embedded_nonssl { background-color:#aaa; color:#fff; } }
+
+@supports (-moz-appearance:none) and (not (cursor:zoom-in)) { .ff22embedded_nonssl { background-color:#800; color:#fff; } }
