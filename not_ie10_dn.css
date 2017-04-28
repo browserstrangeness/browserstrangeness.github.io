@@ -1,0 +1,19 @@
+@charset "<Any Browser but MSIE 10 and below>"; /* In IE10-, Firefox 18-, This line kills the entire sheet */
+@charset "UTF-8"; /* Code provided by Jeff Clayton - https://jeffclayton.wordpress.com */
+
+body {
+	/* color: yellow; */
+}
+
+.not_msie_10dn {
+	background-color:#800;
+    color:#fff;
+}
+
+
+/* Wrapped in this file, this one targets MSIE 11+ and Edge */
+
+_:-ms-lang(x), .ie11upexternal {
+	background-color:#800;
+    color:#fff;
+}
