@@ -1037,7 +1037,7 @@ _:-moz-meter-optimum, :root .ff16up { background-color:#800;color:#fff; }
 _:-moz-tree-row(hover), _::-moz-meter-bar, .ff16bup { background-color:#800;color:#fff; }
 
 /* Firefox 16 (Separated from 17) */
-_:-moz-tree-row(hover), _::-moz-meter-bar:-moz-handler-crashed, .ff16R17 { background-color:#800;color:#fff; } _:-moz-dir(ltr), .ff16R17 { background-color:#aaa;color:#fff; }
+_:-moz-tree-row(hover), _::-moz-meter-bar:-moz-handler-blocked, .ff16R17 { background-color:#800;color:#fff; } _:-moz-dir(ltr), .ff16R17 { background-color:#aaa;color:#fff; }
 
 /* Firefox 15 (Separated from 16) */
 _:-moz-type-unsupported-platform, :root .ff15R16 { background-color:#800;color:#fff; } _::-moz-meter-bar, :root .ff15R16 { background-color:#aaa;color:#fff; }
@@ -1052,7 +1052,7 @@ _:-moz-full-screen-ancestor, :root .ff10up { background-color:#800;color:#fff; }
 _:-moz-full-screen, :root .ff9up { background-color:#800;color:#fff; }
     
 /* Firefox 9, Separated from 10+ */  
-_:-moz-full-screen:-moz-handler-crashed, :root .ff9R10 { background-color:#800;color:#fff; } _:-moz-full-screen-ancestor, :root .ff9R10 { background-color:#aaa;color:#fff; }
+_:-moz-full-screen:-moz-handler-blocked, :root .ff9R10 { background-color:#800;color:#fff; } _:-moz-full-screen-ancestor, :root .ff9R10 { background-color:#aaa;color:#fff; }
     
 /* Firefox 6+ */
 _:-moz-tree-row(hover), _::-moz-progress-bar, .ff6up { background-color:#800;color:#fff; }
@@ -2533,7 +2533,7 @@ Author: Jeff Clayton
 	</div>
     
 	<div class="styled_block">
-		<div class="base_grayed_out ff16R17">_:-moz-tree-row(hover), _::-moz-meter-bar:-moz-handler-crashed, .selector { property:value; } _:-moz-dir(ltr), .selector { property:value; }</div>
+		<div class="base_grayed_out ff16R17">_:-moz-tree-row(hover), _::-moz-meter-bar:-moz-handler-blocked, .selector { property:value; } _:-moz-dir(ltr), .selector { property:value; }</div>
 		<div class="base_targets">Firefox 16 /* The second selector blocks 17+ */</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
@@ -2571,7 +2571,7 @@ Author: Jeff Clayton
 	</div>
 			
 	<div class="styled_block">
-		<div class="base_grayed_out ff9R10">_:-moz-full-screen:-moz-handler-crashed, :root .selector { property:value; } _:-moz-full-screen-ancestor, :root .selector { property:value; }</div>
+		<div class="base_grayed_out ff9R10">_:-moz-full-screen:-moz-handler-blocked, :root .selector { property:value; } _:-moz-full-screen-ancestor, :root .selector { property:value; }</div>
 		<div class="base_targets">Firefox 9 (The second selector blocks 10+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
