@@ -1051,8 +1051,8 @@ _:-moz-full-screen-ancestor, :root .ff10up { background-color:#800;color:#fff; }
 /* Firefox 9+ */
 _:-moz-full-screen, :root .ff9up { background-color:#800;color:#fff; }
     
-/* Firefox 9, Separated from 10-49 and 50+ */
-_:-moz-full-screen, :root .ff9R10 { background-color:#800;color:#fff; } _:-moz-full-screen-ancestor, :root .ff9R10 { background-color:#aaa;color:#fff; } _:any-link:-moz-tree-row(hover), .ff9R10 { background-color:#aaa;color:#fff; }
+/* Firefox 9, Separated from 10+ */  
+_:-moz-full-screen:-moz-handler-crashed, :root .ff9R10 { background-color:#800;color:#fff; } _:-moz-full-screen-ancestor, :root .ff9R10 { background-color:#aaa;color:#fff; }
     
 /* Firefox 6+ */
 _:-moz-tree-row(hover), _::-moz-progress-bar, .ff6up { background-color:#800;color:#fff; }
@@ -2569,11 +2569,10 @@ Author: Jeff Clayton
 		<div class="base_targets">Firefox 9+</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
-        
+			
 	<div class="styled_block">
-		<div class="base_grayed_out ff9R10">_:-moz-full-screen, :root .selector { property:value; } _:-moz-full-screen-ancestor, :root .selector { property:value; } 
-_:any-link:-moz-tree-row(hover), .selector { property:value; }</div>
-		<div class="base_targets">Firefox 9 (The second selector blocks 10-49, the third blocks 50+)</div>
+		<div class="base_grayed_out ff9R10">_:-moz-full-screen:-moz-handler-crashed, :root .selector { property:value; } _:-moz-full-screen-ancestor, :root .selector { property:value; }</div>
+		<div class="base_targets">Firefox 9 (The second selector blocks 10+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
        
