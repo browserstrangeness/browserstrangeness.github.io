@@ -1037,7 +1037,7 @@ _:-moz-meter-optimum, :root .ff16up { background-color:#800;color:#fff; }
 _:-moz-tree-row(hover), _::-moz-meter-bar, .ff16bup { background-color:#800;color:#fff; }
 
 /* Firefox 16 (Separated from 17) */
-_:-moz-tree-row(hover), _::-moz-meter-bar, .ff16R17 { background-color:#800;color:#fff; } _:-moz-dir(ltr), .ff16R17 { background-color:#aaa;color:#fff; }
+_:-moz-tree-row(hover), _::-moz-meter-bar:-moz-handler-crashed, .ff16R17 { background-color:#800;color:#fff; } _:-moz-dir(ltr), .ff16R17 { background-color:#aaa;color:#fff; }
 
 /* Firefox 15 (Separated from 16) */
 _:-moz-type-unsupported-platform, :root .ff15R16 { background-color:#800;color:#fff; } _::-moz-meter-bar, :root .ff15R16 { background-color:#aaa;color:#fff; }
@@ -2533,7 +2533,7 @@ Author: Jeff Clayton
 	</div>
     
 	<div class="styled_block">
-		<div class="base_grayed_out ff16R17">_:-moz-tree-row(hover), _::-moz-meter-bar, .selector { property:value; } _:-moz-dir(ltr), .selector { property:value; }</div>
+		<div class="base_grayed_out ff16R17">_:-moz-tree-row(hover), _::-moz-meter-bar:-moz-handler-crashed, .selector { property:value; } _:-moz-dir(ltr), .selector { property:value; }</div>
 		<div class="base_targets">Firefox 16 /* The second selector blocks 17+ */</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
