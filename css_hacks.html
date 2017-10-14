@@ -402,7 +402,10 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 
 /* Internet Explorer 9 */
 @media screen and (min-width:0\0) and (min-resolution:.001dpcm) { .msie9 { background-color:#800;color:#fff; } }
-  
+
+/* Internet Explorer (All but ie8) */
+@media \0screen\,screen\9, screen and (min-width:0\0) and (min-resolution:+72dpi) { .msie_allbut_ie8 { background-color:#800;color:#fff; } }
+
 /* Firefox 49+ */
 @supports (-moz-appearance:none) and (text-align-last:auto) { .ff49up { background-color:#800;color:#fff; } }
 	
@@ -914,6 +917,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Safari 3.X Chrome 1 [webkit 523.12.9,525.19] - updated */
 @media screen and (min-width:0\-) { _:window-inactive:not(:root:root), .s3_c1 { background-color:#800;color:#fff; } }
      
+/* Safari 6.1-10.0 (another way) */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media (min-width:0px) { .saf61plus { background-color:#800;color:#fff; } } }
+
 /* * * * */
 
 /* Edge Browser 13+ on Windows 10 */
@@ -1637,6 +1643,12 @@ Author: Jeff Clayton
 
 <h2 style='clear:both;float:none;padding-top:10px;'>By Version</h2><br>
 	
+	<div class="styled_block">
+		<div class="base_grayed_out msie_allbut_ie8">@media screen and (min-width:0\0) and (min-resolution:+72dpi), \0screen\,screen\9 { .selector { property:value; } }</div>
+		<div class="base_targets">Internet Explorer 11- (All but ie8)</div>
+		<div class="base_credits">ie11 Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+    
 	<div class="styled_block">
 		<div class="base_grayed_out msie11up">_:-ms-fullscreen, :root .selector { property:value; }</div>
 		<div class="base_targets">Internet Explorer 11</div>
@@ -3633,6 +3645,13 @@ Author: Jeff Clayton
 
 <h2 style='clear:both;float:none;padding-top:10px;'>Experiments</h2><br>
 	
+	
+	<div class="styled_block">
+		<div class="base_grayed_out saf61plus">@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media (min-width:0px) { .selector { property:value; } } }</div>
+		<div class="base_targets">Safari 6.1-10.0 (not 10.1+)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+    
 	<div class="styled_block">
 		<div class="base_grayed_out spec_3">&lt;script language=JavaScript&gt; if (navigator.platform.indexOf('Win')==-1 && navigator.userAgent.indexOf('Win')!=-1) 
 { document.write("&lt;style type=text/css&gt; _:-webkit-any-link, .selector { property:value; }&lt;/style&gt;"); } &lt;/script&gt;</div>
