@@ -1151,8 +1151,11 @@ _::-webkit-:host:not(:root:root), .saf10 { background-color:#800;color:#fff; }
 /* Safari 9+ / Not iOS */
 _:-webkit-full-screen:not(:root:root), .noniossaf9up { background-color:#800;color:#fff; }
 
-/* Safari 9+ */
-_::-webkit-:not(:root:root), .saf9up { background-color:#800;color:#fff; }
+/* Safari 9.0+ */
+ _:default:not(:root:root), .saf9up { background-color:#800;color:#fff; }
+
+/* Safari 9.0-10.0 */
+_::-webkit-:not(:root:root), .saf9-10 { background-color:#800;color:#fff; }
 
 /* Safari 7.1 & 8+ [webkit 538.35.8+] */
 _::-webkit-full-page-media, _:future, :root .s8 { background-color:#800;color:#fff; }
@@ -1247,6 +1250,14 @@ _:not(*:root), .webkita { background-color:#800;color:#fff; }
 /* Webkit browsers - non-ios (chrome 15+, safari 5.1+, Android browser 4+) */
 _:-webkit-full-screen-ancestor, :root .nonioswebkit { background-color:#800;color:#fff; }
 
+	
+/* ie_test1 */
+@media, \0screen\,screen\9 { .ie_test1 { background-color:#800;color:#fff; } }
+
+/* ie_test2 */
+@media \0screen\,screen\9, { .ie_test2 { background-color:#800;color:#fff; } }
+
+	
 /* Safari 6.1-7.0 (non-iOS) */
 @media screen and (min-color-index:0) { _:-webkit-full-screen, .noniossaf61-7 {(; background-color:#800;color:#fff; );} }
 
@@ -2918,7 +2929,13 @@ Author: Jeff Clayton
 	</div>
 
 	<div class="styled_block">
-		<div class="base_grayed_out saf9up">_::-webkit-:not(:root:root), .selector { property:value; }</div>
+		<div class="base_grayed_out saf9up">_:default:not(:root:root), .selector { property:value; }</div>
+		<div class="base_targets">Safari 9+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out saf9-10">_::-webkit-:not(:root:root), .selector { property:value; }</div>
 		<div class="base_targets">Safari 9.0-10.0</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
@@ -3659,6 +3676,20 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
+			<!--
+	<div class="styled_block">
+		<div class="base_grayed_out ie_test1">@media, \0screen\,screen\9 { .selector { property:value; } }</div>
+		<div class="base_targets">ie test 1: ie 6-7</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+    
+	<div class="styled_block">
+		<div class="base_grayed_out ie_test2">@media \0screen\,screen\9, { .selector { property:value; } }</div>
+		<div class="base_targets">ie test 2: ie 6-7</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+    //-->
+			
 <h2 id="operamini" style='clear:both;float:none;padding-top:20px;'>-: Opera Mini :-</h2><br>
 	
 	<div style="clear:both;float:none;margin:10px;margin-top:0px;margin-left:1%;margin-right:6%;text-align:left;">
