@@ -603,6 +603,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 
 /* Safari 10.1+ (media+supports) */
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) { .saf10_1bup { background-color:#800;color:#fff; } } }
+	
+/* Safari 9+ */
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .s9upm { background-color:#800;color:#fff; } }
 
 /* Safari 9 iOS Only */
 @supports (overflow:-webkit-marquee) and (-webkit-text-size-adjust:none) and (justify-content:inherit) { .IOSs9 { background-color:#800;color:#fff; } }
@@ -2928,6 +2931,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
+	<div class="styled_block">
+		<div class="base_grayed_out s9upm">@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .selector { property:value; } }</div>
+		<div class="base_targets">Safari 9+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
 	<div class="styled_block">
 		<div class="base_grayed_out saf9up">_:default:not(:root:root), .selector { property:value; }</div>
 		<div class="base_targets">Safari 9+</div>
