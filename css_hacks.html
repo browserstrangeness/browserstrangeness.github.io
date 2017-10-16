@@ -923,6 +923,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Safari 6.1-10.0 (another way) */
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media (min-width:0px) { .saf61plus { background-color:#800;color:#fff; } } }
 
+/* Safari 5.1-6.0, Chrome  (1 version of an old css hack found all over the net - second selector blocks old chrome 10-24) */
+@media only screen and (-webkit-min-device-pixel-ratio:1) { ::i-block-chrome, .olds51-60c10-24 {  background-color:#800;color:#fff; } }
+
 /* * * * */
 
 /* Edge Browser 13+ on Windows 10 */
@@ -2971,6 +2974,12 @@ Author: Jeff Clayton
 		<div class="base_grayed_out saf61-7">@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) { .selector {(; property:value; );} }</div>
 		<div class="base_targets">Safari 6.1-7.0</div>
 		<div class="base_credits">The Safari 6.1-7.0 Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out olds51-60c10-24">@media only screen and (-webkit-min-device-pixel-ratio:1) { ::i-block-chrome, .selector { property:value; } }</div>
+		<div class="base_targets">Safari 5.1-6.0, old Chrome 10-24 (Chrome versions not used now)</div>
+		<div class="base_credits">a version of an old css hack found all over the net</div>
 	</div>
 
 <h2 id="chrome" style='clear:both;float:none;padding-top:20px;'>- Chrome-Only CSS -</h2><br>
