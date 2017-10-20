@@ -604,6 +604,12 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Safari 10.1+ (media+supports) */
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) { .saf10_1bup { background-color:#800;color:#fff; } } }
 	
+/* Safari 10.1 (media+supports) */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) { .saf10_1 { background-color:#800;color:#fff; } } }
+	
+/* Safari 11+ (media+supports) */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .saf11up { background-color:#800;color:#fff; } } }
+	
 /* Safari 9+ */
 @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .s9upm { background-color:#800;color:#fff; } }
 
@@ -797,7 +803,10 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 @supports (-webkit-appearance:none) and (font-variant-ligatures:normal) and (not (background-blend-mode:difference,normal)) { .c34 { background-color:#800;color:#fff; } }
 
 /* Chrome 33+ [webkit 537.36] */
-@supports (-webkit-appearance:none) and (font-kerning:auto) and (not (overflow:-webkit-marquee)) { .c33up { background-color:#800;color:#fff; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) { @supports (font-kerning:auto) { .c33up { background-color:#800;color:#fff; } } }
+
+/* Chrome 33+ [webkit 537.36] now also safari */
+@supports (-webkit-appearance:none) and (font-kerning:auto) and (not (overflow:-webkit-marquee)) { .c33ups { background-color:#800;color:#fff; } }
 
 /* Chrome 33 [webkit 537.36] */
 @supports (-webkit-appearance:none) and (font-kerning:auto) and (not (font-variant-ligatures:normal)) { .c33 { background-color:#800;color:#fff; } }
@@ -806,7 +815,10 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 @supports (-webkit-appearance:none) and (object-fit:none) { _::cue-region, .c32-39 { background-color:#800;color:#fff; } }
 
 /* Chrome 32+ [webkit 537.36] */
-@supports (-webkit-appearance:none) and (object-fit:none) and (not (overflow:-webkit-marquee)) { .c32up { background-color:#800;color:#fff; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) { @supports (object-fit:none) { .c32up { background-color:#800;color:#fff; } } }
+
+/* Chrome 32+ [webkit 537.36] now also safari */
+@supports (-webkit-appearance:none) and (object-fit:none) and (not (overflow:-webkit-marquee)) { .c32ups { background-color:#800;color:#fff; } }
 
 /* Chrome 32+, Safari 9+ [webkit 537.36] */
 @supports (-webkit-appearance:none) and (object-fit:none) { .c32up_s9up { background-color:#800;color:#fff; } }
@@ -1404,7 +1416,7 @@ if (ff22upjs) document.write("<style type='text/css'> .ff22upjs { background-col
 <h1>browser strangeness</h1>
 
 <p style="padding:0px;padding-left:20px;padding-right:20px;font-weight:bold;"><center>
-*** Updated for Microsoft Edge and Safari 10.1 ***
+*** Updated for Microsoft Edge and Safari 11 ***
 </center>
 <br /><br />
  This is my public LIVE browser test page for my own CSS hack
@@ -2917,15 +2929,27 @@ Author: Jeff Clayton
 <h2 id="safari" style='clear:both;float:none;padding-top:20px;'>- Safari-Only CSS -</h2><br>
 	
 	<div class="styled_block">
+		<div class="base_grayed_out saf11up">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .selector { property:value; } } }</div>
+		<div class="base_targets">Safari 11+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
 		<div class="base_grayed_out saf10_1up">@media not all and (min-resolution:.001dpcm) { @media { .selector { property:value; } } }</div>
 		<div class="base_targets">Safari 10.1+</div>
-		<div class="base_credits">Safari 10.1+ Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
 		<div class="base_grayed_out saf10_1bup">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) { .selector { property:value; } } }</div>
 		<div class="base_targets">Safari 10.1+</div>
-		<div class="base_credits">Safari 10.1+ Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out saf10_1">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) { .selector { property:value; } } }</div>
+		<div class="base_targets">Safari 10.1</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
@@ -3243,7 +3267,7 @@ Author: Jeff Clayton
 	</div>
 
 	<div class="styled_block">
-		<div class="base_grayed_out c33up">@supports (-webkit-appearance:none) and (font-kerning:auto) and (not (overflow:-webkit-marquee)) { .selector { property:value; } }</div>
+		<div class="base_grayed_out c33up">@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) { @supports (font-kerning:auto) { .selector { property:value; } } }</div>
 		<div class="base_targets">Chrome 33+ (and Opera 20+)</div>
 		<div class="base_credits">Authors: <a href="https://github.com/guillaume-simons" target="_blank">Guillaume Simons</a> &amp; <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
@@ -3255,7 +3279,7 @@ Author: Jeff Clayton
 	</div>
 
 	<div class="styled_block">
-		<div class="base_grayed_out c32up">@supports (-webkit-appearance:none) and (object-fit:none) and (not (overflow:-webkit-marquee)) { .selector { property:value; } }</div>
+		<div class="base_grayed_out c32up">@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) { @supports (object-fit:none) { .selector { property:value; } } }</div>
 		<div class="base_targets">Chrome 32+ (and Opera 19+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
@@ -3306,12 +3330,6 @@ Author: Jeff Clayton
 		<div class="base_grayed_out c29up">@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) { .selector { property:value; } }</div>
 		<div class="base_targets">Chrome 29+ (and Opera 16+)</div>
         <div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
-	</div>
-
-	<div class="styled_block">
-		<div class="base_grayed_out c29up_nosafari_noedge">@supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
-		<div class="base_targets">Chrome 29+ (and Opera 16+)</div>
-		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
@@ -3439,8 +3457,20 @@ Author: Jeff Clayton
 	</div>
     
 	<div class="styled_block">
+		<div class="base_grayed_out c33ups">@supports (-webkit-appearance:none) and (font-kerning:auto) and (not (overflow:-webkit-marquee)) { .selector { property:value; } }</div>
+		<div class="base_targets">Chrome 33+ (and Opera 20+), now also Safari</div>
+		<div class="base_credits">Authors: <a href="https://github.com/guillaume-simons" target="_blank">Guillaume Simons</a> &amp; <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
 		<div class="base_grayed_out c32up_s9up">@supports (-webkit-appearance:none) and (object-fit:none) { .selector { property:value; } }</div>
 		<div class="base_targets">Chrome 32+ (and Opera 19+), Safari 9+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out c32ups">@supports (-webkit-appearance:none) and (object-fit:none) and (not (overflow:-webkit-marquee)) { .selector { property:value; } }</div>
+		<div class="base_targets">Chrome 32+ (and Opera 19+), now also Safari</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -3448,6 +3478,12 @@ Author: Jeff Clayton
 		<div class="base_grayed_out c29up_s9up">@supports (-webkit-appearance:none) and (justify-content:inherit) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
 		<div class="base_targets">Chrome 29+ (and Opera 16+), Safari 9+</div>
         <div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out c29up_nosafari_noedge">@supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
+		<div class="base_targets">Chrome 29+ (and Opera 16+), now also Safari</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
