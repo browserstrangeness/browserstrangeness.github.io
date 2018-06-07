@@ -21,9 +21,9 @@
 }
 
 </style>
-<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" media="screen" />
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext" media="all" />
 <style type="text/css">
 
 html {
@@ -259,11 +259,29 @@ h3 {
 /* Anything BUT the Microsoft Edge Browser or Internet Explorer (Safari 9+, Chrome 28+. Firefox 22+) */
 @supports (not (-ms-ime-align:auto)) { .notedge { background-color:#800;color:#fff; } }
 
+/* Edge Browser 17+ */
+@supports (-ms-ime-align:auto) and (font-variation-settings:normal) { .msedge17up { background-color:#800;color:#fff; } }
+	
+/* Edge Browser 16+ */
+@supports (-ms-ime-align:auto) and (position:sticky) { .msedge16up { background-color:#800;color:#fff; } }
+	
+/* Edge Browser 16 */
+@supports (-ms-ime-align:auto) and (position:sticky) and (not (font-variation-settings:normal)) { .msedge16 { background-color:#800;color:#fff; } }
+	
+/* Edge Browser 16- */
+@supports (-ms-ime-align:auto) and (not (font-variation-settings:normal)) { .msedge16dn { background-color:#800;color:#fff; } }
+	
 /* Edge 15+ Variables */
 @supports (-ms-ime-align:auto) { .msedgevars15up { --msedgevars15up-item_1:#800; background-color:var(--msedgevars15up-item_1); --msedgevars15up-item_2:#fff; color:var(--msedgevars15up-item_2); } }
 
 /* Edge Browser 15+ */
 @supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) { .msedge15up { background-color:#800;color:#fff; } }
+	
+/* Edge Browser 15 */
+@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial)) and (not (position:sticky)) { .msedge15 { background-color:#800;color:#fff; } }
+	
+/* Edge Browser 15- */
+@supports (-ms-ime-align:auto) and (not (position:sticky)) { .msedge15dn { background-color:#800;color:#fff; } }
 	
 /* Edge Browser 14+ */
 @supports (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .msedge14up { background-color:#800;color:#fff; } }
@@ -1506,8 +1524,44 @@ Author: Jeff Clayton
 <h2 style='clear:both;float:none;padding-top:10px;'>By Version</h2><br>
 	
 	<div class="styled_block">
+		<div class="base_grayed_out msedge17up">@supports (-ms-ime-align:auto) and (font-variation-settings:normal) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 17+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge16up">@supports (-ms-ime-align:auto) and (position:sticky) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 16+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge16">@supports (-ms-ime-align:auto) and (position:sticky) and (not (font-variation-settings:normal)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 16</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge16dn">@supports (-ms-ime-align:auto) and (not (font-variation-settings:normal)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 16-</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
 		<div class="base_grayed_out msedge15up">@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) { .selector { property:value; } }</div>
 		<div class="base_targets">Microsoft Edge 15+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge15">@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial)) and (not (position:sticky)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 15</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out msedge15dn">@supports (-ms-ime-align:auto) and (not (position:sticky)) { .selector { property:value; } }</div>
+		<div class="base_targets">Microsoft Edge 15-</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
