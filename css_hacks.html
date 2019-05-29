@@ -259,9 +259,18 @@ h3 {
 /* Anything BUT the Microsoft Edge Browser or Internet Explorer (Safari 9+, Chrome 28+. Firefox 22+) */
 @supports (not (-ms-ime-align:auto)) { .notedge { background-color:#800;color:#fff; } }
 
+/* Edge Browser 18+ */
+@supports (-ms-ime-align:auto) and (-webkit-mask: url()) { .msedge18up { background-color:#800;color:#fff; } }
+	
 /* Edge Browser 17+ */
 @supports (-ms-ime-align:auto) and (font-variation-settings:normal) { .msedge17up { background-color:#800;color:#fff; } }
 	
+/* Edge Browser 17 */
+@supports (-ms-ime-align:auto) and (font-variation-settings:normal) and (not (-webkit-mask: url())) { .msedge17 { background-color:#800;color:#fff; } }
+
+/* Edge Browser 17- */
+@supports(-ms-ime-align:auto) and (not (-webkit-mask: url())) { .msedge17dn { background-color:#800;color:#fff; } }
+
 /* Edge Browser 16+ */
 @supports (-ms-ime-align:auto) and (position:sticky) { .msedge16up { background-color:#800;color:#fff; } }
 	
