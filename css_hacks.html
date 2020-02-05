@@ -313,11 +313,17 @@ h3 {
 /* Chromium Edge 79+ (probably also the pre-releases 77 & 78) - SUPPORTS BOTH MS HTML AND MS CHROMIUM VERSiONS OF MS EDGE */
 @supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (not (-ms-accelerator:true)) { .cedge79up { background-color:#800;color:#fff; } }
 
-/* Chromium Edge 79+ (probably also the pre-releases 77 & 78) - not this one */
-@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:TextField)) and (not (-ms-accelerator:true)) { .cedge79aup { background-color:#800;color:#fff; } }
-
 /* Chromium Edge 79+ (probably also the pre-releases 77 & 78) - SUPPORTS BOTH MS HTML AND MS CHROMIUM VERSiONS OF MS EDGE */
 @supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (not (-ms-accelerator:true)) { .cedge79bup { background-color:#800;color:#fff; } }
+
+/* Chromium Edge 79+ (probably also the pre-releases 77 & 78) - SUPPORTS ONLY MS CHROMIUM VERSiON OF MS EDGE */
+@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (not (-ms-accelerator:true)) and (not (-ms-ime-align:auto)) { .cedge79gup { background-color:#800;color:#fff; } }
+
+/* Chromium Edge 79+ (probably also the pre-releases 77 & 78) - SUPPORTS ONLY MS CHROMIUM VERSiON OF MS EDGE */
+@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (not (-ms-accelerator:true)) and (not (-ms-ime-align:auto)) { .cedge79hup { background-color:#800;color:#fff; } }
+
+/* Chromium Edge 79+ (probably also the pre-releases 77 & 78) - not this one */
+@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:TextField)) and (not (-ms-accelerator:true)) { .cedge79aup { background-color:#800;color:#fff; } }
 
 /* Chromium Edge 79+ (probably also the pre-releases 77 & 78) MS HTML VERSION ONLY */
 /*@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .cedge79cup { background-color:#800;color:#fff; } }
@@ -1555,13 +1561,25 @@ Author: Jeff Clayton
     
 	<div class="styled_block">
 		<div class="base_grayed_out cedge79up">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
-		<div class="base_targets">MS Edge (MSHTML & MS Chromium)</div>
+		<div class="base_targets">MS Edge (MS-HTML & MS-Chromium)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
 		<div class="base_grayed_out cedge79bup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
-		<div class="base_targets">MS Edge (MSHTML & MS Chromium)</div>
+		<div class="base_targets">MS Edge (MS-HTML & MS-Chromium)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out cedge79gup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (not (-ms-accelerator:true)) and (not (-ms-ime-align:auto)) { .selector { property:value; } }</div>
+		<div class="base_targets">MS Edge (MS-Chromium)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out cedge79hup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (not (-ms-accelerator:true)) and (not (-ms-ime-align:auto)) { .selector { property:value; } }</div>
+		<div class="base_targets">MS Edge (MS-Chromium)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
