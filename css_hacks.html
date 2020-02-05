@@ -325,11 +325,11 @@ h3 {
 /* Chromium Edge 79+ (probably also the pre-releases 77 & 78) */
 @supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (-ms-ime-align:auto) and (not (-ms-accelerator:true)) { .cedge79dup { background-color:#800;color:#fff; } }
 
-/* Chromium Edge 79+ reverse test */
-@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (-ms-accelerator:true) { .cedge79eup { background-color:#800;color:#fff; } }
+/* Chromium Edge 79+ reverse test - not this one */
+@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (-ms-ime-align:auto) { .cedge79eup { background-color:#800;color:#fff; } }
 
-/* Chromium Edge 79+ reverse test */
-@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (-ms-accelerator:true) { .cedge79fup { background-color:#800;color:#fff; } }
+/* Chromium Edge 79+ reverse test - not this one */
+@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (-ms-ime-align:auto) { .cedge79fup { background-color:#800;color:#fff; } }
 
 /* Internet Explorer 11+ for Windows Mobile 8.1 and Windows 10 Preview (Media Query) */
 @media screen and (-ms-high-contrast:active) and (-webkit-min-device-pixel-ratio:0), (-ms-high-contrast:none) and (-webkit-min-device-pixel-ratio:0) {  .win10iepreviewmedia { background-color:#800;color:#fff; } }
@@ -1555,19 +1555,19 @@ Author: Jeff Clayton
     
 	<div class="styled_block">
 		<div class="base_grayed_out cedge79up">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
-		<div class="base_targets">Test 1</div>
+		<div class="base_targets">MS Edge (MSHTML & Chromium)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
 		<div class="base_grayed_out cedge79bup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
-		<div class="base_targets">Test 2</div>
+		<div class="base_targets">MS Edge (MSHTML & Chromium)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<!-- not this one <div class="styled_block">
 		<div class="base_grayed_out cedge79aup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:TextField)) and (not (-ms-accelerator:true)) { .selector { property:value; } }</div>
-		<div class="base_targets">Test 2</div>
+		<div class="base_targets">Test 2 -- NOT THIS ONE</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div> //-->
 
@@ -1584,14 +1584,14 @@ Author: Jeff Clayton
 	</div>
 
 	<div class="styled_block">
-		<div class="base_grayed_out cedge79eup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (-ms-accelerator:true) { .selector { property:value; } }</div>
-		<div class="base_targets">Test 5</div>
+		<div class="base_grayed_out cedge79eup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:Field)) and (-ms-ime-align:auto) { .selector { property:value; } }</div>
+		<div class="base_targets">Test 5 -- NOT THIS ONE</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
-
+	
 	<div class="styled_block">
-		<div class="base_grayed_out cedge79fup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (-ms-accelerator:true) { .selector { property:value; } }</div>
-		<div class="base_targets">Test 6</div>
+		<div class="base_grayed_out cedge79fup">@supports (-webkit-tap-highlight-color:currentcolor) and (not (border-color:ActiveText)) and (-ms-ime-align:auto) { .selector { property:value; } }</div>
+		<div class="base_targets">Test 6 -- NOT THIS ONE</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
