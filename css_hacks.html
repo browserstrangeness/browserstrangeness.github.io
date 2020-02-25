@@ -663,6 +663,12 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 	
 /* Safari 11+ (media+supports) */
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .saf11up { background-color:#800;color:#fff; } } }
+
+/* Safari 12.1+ (iOS 12.2+) (media+supports) TESTING */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (float:inline-start) { .saf12_1i2up { background-color:#800;color:#fff; } } }
+	
+/* Safari 13+, not iOS *yet* (media+supports) TESTING */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (display:flow-root) { .saf13_nIOSup { background-color:#800;color:#fff; } } }
 	
 /* Safari 9+ */
 @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .s9upm { background-color:#800;color:#fff; } }
