@@ -664,10 +664,10 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Safari 11+ (media+supports) */
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .saf11up { background-color:#800;color:#fff; } } }
 
-/* Safari 12.1+ (iOS 12.2+) (media+supports) TESTING */
+/* Safari 12.1+ (iOS 12.2+) (media+supports) TESTING NOT YET */
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (float:inline-start) { .saf12_1i2up { background-color:#800;color:#fff; } } }
 	
-/* Safari 13+, not iOS *yet* (media+supports) TESTING */
+/* Safari 13+, not iOS *yet* (media+supports) */
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (display:flow-root) { .saf13_nIOSup { background-color:#800;color:#fff; } } }
 	
 /* Safari 9+ */
@@ -3099,16 +3099,16 @@ Author: Jeff Clayton
 <h2 id="safari" style='clear:both;float:none;padding-top:20px;'>- Safari-Only CSS -</h2><br>
 	
 	<div class="styled_block">
-		<div class="base_grayed_out saf12_1i2up">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and ((float:inline-start) { .selector { property:value; } } }</div>
-		<div class="base_targets">Safari 12.1+ (iOS 12.2+)</div>
+		<div class="base_grayed_out saf13_nIOSup">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (display:flow-root) { .selector { property:value; } } }</div>
+		<div class="base_targets">Safari 13+ (not iOS yet)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
-	<div class="styled_block">
-		<div class="base_grayed_out saf13_nIOSup">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (display:flow-root) { .selector { property:value; } } }</div>
-		<div class="base_targets">Safari 13+, not iOS *yet*</div>
+	<!-- NOT YET WORKING div class="styled_block">
+		<div class="base_grayed_out saf12_1i2up">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (float:inline-start) { .selector { property:value; } } }</div>
+		<div class="base_targets">Safari 12.1+ (iOS 12.2+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
-	</div>
+	</div//-->
 
 	<div class="styled_block">
 		<div class="base_grayed_out saf11up">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .selector { property:value; } } }</div>
