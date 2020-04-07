@@ -344,9 +344,6 @@ h3 {
 @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {  .msie10upmedia  { background-color:#800;color:#fff; } }
 xel-ratio:0) {  .win10iepreviewmedia { background-color:#800;color:#fff; } }
 
-/* NO Internet Explorer */
-@media screen and (min-width:1vmin) {  .notmsievmin { background-color:#800;color:#fff; } }
-
 /* Firefox 25+ (Windows 8 and above) */
 @media screen and (-moz-os-version:windows-win8), screen and (-moz-os-version:windows-win10) { .winffeightup  { background-color:#800;color:#fff; } }
 
@@ -1975,12 +1972,6 @@ Author: Jeff Clayton
 		<div class="base_grayed_out msie8upmedianoff">@media screen\0 { .selector { property:value; } _:-moz-tree-row(hover), .selector { property:value; } }</div>
 		<div class="base_targets">Internet Explorer 8-11 (The second selector blocks Firefox 1.x)</div>
 		<div class="base_credits">Source: (My Combination)</div>
-	</div>
-    
-	<div class="styled_block">
-		<div class="base_grayed_out notmsievmin">@media screen and (min-width:1vmin) { .selector { property:value; } }</div>
-		<div class="base_targets">Testing</div>
-		<div class="base_credits">Source:</div>
 	</div>
     
 	<div class="styled_block"><!-- Anything but Explorer 10- and Firefox 18- (Put this line in an External Style Sheet) //-->
