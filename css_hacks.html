@@ -342,7 +342,11 @@ h3 {
 
 /* The famous Internet Explorer 10+ Media Query */
 @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {  .msie10upmedia  { background-color:#800;color:#fff; } }
+xel-ratio:0) {  .win10iepreviewmedia { background-color:#800;color:#fff; } }
 
+/* A different IE9 approach using the non-standard vm unit */
+@media screen and (min-width:1vm) {  .msie9vm  { background-color:#800;color:#fff; }
+	
 /* Firefox 25+ (Windows 8 and above) */
 @media screen and (-moz-os-version:windows-win8), screen and (-moz-os-version:windows-win10) { .winffeightup  { background-color:#800;color:#fff; } }
 
@@ -1719,7 +1723,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12up">@supports (-ms-ime-align:auto) { .selector { property:value; } }</div>
-		<div class="base_targets">Microsoft Edge 12+ (all MS Edge)</div>
+		<div class="base_targets">Microsoft Edge 12+ (all MS Edge) Not Chromium</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1731,7 +1735,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12bup">_:-ms-lang(x), _:-webkit-full-screen, .selector { property:value; }</div>
-		<div class="base_targets">Microsoft Edge 12+ (all MS Edge)</div>
+		<div class="base_targets">Microsoft Edge 12+ (all MS Edge) Not Chromium</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1985,6 +1989,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
     
+	<div class="styled_block">
+		<div class="base_grayed_out msie9vm">@media screen and (min-width:1vm) { .selector { property:value; } }</div>
+		<div class="base_targets">Internet Explorer 9 TESTING</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
 <h2 id="firefox" style='clear:both;float:none;padding-top:30px;'>-: Firefox CSS :-</h2><br>
 	   
 	<div style="clear:both;float:none;margin:10px;margin-top:0px;margin-left:1%;margin-right:6%;text-align:left;">
