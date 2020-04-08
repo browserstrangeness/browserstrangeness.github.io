@@ -344,6 +344,9 @@ h3 {
 @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {  .msie10upmedia  { background-color:#800;color:#fff; } }
 xel-ratio:0) {  .win10iepreviewmedia { background-color:#800;color:#fff; } }
 
+/* NO Internet Explorer */
+@media screen and (min-width:1vmin) {  .notmsievmin { background-color:#800;color:#fff; } }
+
 /* Firefox 25+ (Windows 8 and above) */
 @media screen and (-moz-os-version:windows-win8), screen and (-moz-os-version:windows-win10) { .winffeightup  { background-color:#800;color:#fff; } }
 
@@ -1535,7 +1538,7 @@ Author: Jeff Clayton
 
 <br>
 
-<div class="wide_styled_block" style="text-align:center">[<a href="/">Index</a>] [<a href="#edge">Edge</a>] [<a href="#msie">Internet Explorer</a>] [<a href="#firefox">Firefox</a>] [<a href="#safari">Safari</a>] [<a href="#chrome">Chrome</a>] [<a href="#webkit">Chrome+Safari</a>] [<a href="#operamini">Opera Mini</a>]</div>
+<div class="wide_styled_block" style="text-align:center">[<a href="/">Index</a>] [<a href="#edge">EdgeHTML</a>] [<a href="#msie">Internet Explorer</a>] [<a href="#firefox">Firefox</a>] [<a href="#safari">Safari</a>] [<a href="#chrome">Chrome</a>] [<a href="#webkit">Chrome+Safari</a>] [<a href="#operamini">Opera Mini</a>]</div>
 </div>
 <!--
 	<div class="styled_block">
@@ -1544,23 +1547,22 @@ Author: Jeff Clayton
 	</div>
 //-->
 
-<h2 id="edge" style='clear:both;float:none;padding-top:20px;'>-: MS Edge Browser CSS :-</h2><br>
+<h2 id="edge" style='clear:both;float:none;padding-top:20px;'>-: MS Edge (EdgeHTML) Browser CSS :-</h2><br>
 	
 	<div style="clear:both;float:none;margin:10px;margin-top:0px;margin-left:1%;margin-right:6%;text-align:left;">
-	Windows 10's Microsoft Edge Browser started at version 12, where Internet Explorer left off at version 11. In January of 2020 the Chromium 79 based version of MS Edge has been released. The hacks for Chrome work for it, not the MS Edge ones.
-	</div>
+	Windows 10's Microsoft Edge Browser started at version 12, where Internet Explorer left off at version 11, and continued to version 18. In January of 2020 the Chromium 79 based version of MS Edge has been released. <a href="#chrome">The hacks for Chrome</a> work for it, not the MS EdgeHTML ones.</div>
 
 <h2 style='clear:both;float:none;padding-top:0px;'>Special Purpose</h2><br>
     
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12up">@supports (-ms-ime-align:auto) { .selector { property:value; } }</div>
-		<div class="base_targets">Microsoft Edge 12+ (all MS Edge) Not Chromium</div>
+		<div class="base_targets">Microsoft Edge 12-18 (all EdgeHTML) Not Chromium</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12bup">_:-ms-lang(x), _:-webkit-full-screen, .selector { property:value; }</div>
-		<div class="base_targets">Microsoft Edge 12+ (all MS Edge) Not Chromium</div>
+		<div class="base_targets">Microsoft Edge 12-18 (all EdgeHTML) Not Chromium</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1624,7 +1626,7 @@ Author: Jeff Clayton
 	
 	<div class="styled_block">
 		<div class="base_grayed_out msedge18up">@supports (-ms-ime-align:auto) and (-webkit-mask: url()) { .selector { property:value; } }</div>
-		<div class="base_targets">Microsoft Edge 18+</div>
+		<div class="base_targets">Microsoft Edge 18</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1720,7 +1722,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12up">@supports (-ms-ime-align:auto) { .selector { property:value; } }</div>
-		<div class="base_targets">Microsoft Edge 12+ (all MS Edge) Not Chromium</div>
+		<div class="base_targets">Microsoft Edge 12-18 (all EdgeHTML) Not Chromium</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1732,7 +1734,7 @@ Author: Jeff Clayton
 
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12bup">_:-ms-lang(x), _:-webkit-full-screen, .selector { property:value; }</div>
-		<div class="base_targets">Microsoft Edge 12+ (all MS Edge) Not Chromium</div>
+		<div class="base_targets">Microsoft Edge 12-18 (all EdgeHTML) Not Chromium</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
@@ -1972,6 +1974,12 @@ Author: Jeff Clayton
 		<div class="base_grayed_out msie8upmedianoff">@media screen\0 { .selector { property:value; } _:-moz-tree-row(hover), .selector { property:value; } }</div>
 		<div class="base_targets">Internet Explorer 8-11 (The second selector blocks Firefox 1.x)</div>
 		<div class="base_credits">Source: (My Combination)</div>
+	</div>
+    
+	<div class="styled_block">
+		<div class="base_grayed_out notmsievmin">@media screen and (min-width:1vmin) { .selector { property:value; } }</div>
+		<div class="base_targets">Chrome 44+, MS Edge (All Including Chromium), Not MSIE, Needs Testing in old Firefox + Safari</div>
+		<div class="base_credits">Source:</div>
 	</div>
     
 	<div class="styled_block"><!-- Anything but Explorer 10- and Firefox 18- (Put this line in an External Style Sheet) //-->
@@ -3961,7 +3969,7 @@ Author: Jeff Clayton
 <div style='clear:both;float:none;padding-top:20px;'>&nbsp;</div>
 <div class="centered_header_block">
 
-<div class="wide_styled_block" style="text-align:center">[<a href="/">Index</a>] [<a href="#edge">Edge</a>] [<a href="#msie">Internet Explorer</a>] [<a href="#firefox">Firefox</a>] [<a href="#safari">Safari</a>] [<a href="#chrome">Chrome</a>] [<a href="#webkit">Chrome+Safari</a>] [<a href="#operamini">Opera Mini</a>]</div>
+<div class="wide_styled_block" style="text-align:center">[<a href="/">Index</a>] [<a href="#edge">Edge-HTML</a>] [<a href="#msie">Internet Explorer</a>] [<a href="#firefox">Firefox</a>] [<a href="#safari">Safari</a>] [<a href="#chrome">Chrome</a>] [<a href="#webkit">Chrome+Safari</a>] [<a href="#operamini">Opera Mini</a>]</div>
 </div>
 
 <script language="JavaScript" type="text/JavaScript">document.write("<br />"+navigator.userAgent)+"<br />";</script>
