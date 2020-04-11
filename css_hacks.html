@@ -943,6 +943,7 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 
 @supports (overflow:-webkit-marquee) and (not (justify-content:inherit)) { .c28 { background-color:#800;color:#fff; } } /* chrome 28 only [webkit 537.36] */
 
+
 /* Chrome 28 and newer use Blink, and report webkit 537.36 */
 
 /* Chrome 24-28 */
@@ -1233,6 +1234,9 @@ _::-webkit-:host:not(:root:root), .saf10 { background-color:#800;color:#fff; }
 /* Safari 9+ / Not iOS */
 _:-webkit-full-screen:not(:root:root), .noniossaf9up { background-color:#800;color:#fff; }
 
+/* Safari 9.0+ */
+_:not(a, b), :root .saf9upnot { background-color:#800;color:#fff; }  
+    
 /* Safari 9.0+ */
  _:default:not(:root:root), .saf9up { background-color:#800;color:#fff; }
 
@@ -3155,6 +3159,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 	
+	<div class="styled_block">
+		<div class="base_grayed_out saf9upnot">_:not(a, b), :root  .selector { property:value; }</div>
+		<div class="base_targets">Safari 9+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
 	<div class="styled_block">
 		<div class="base_grayed_out saf9up">_:default:not(:root:root), .selector { property:value; }</div>
 		<div class="base_targets">Safari 9+</div>
