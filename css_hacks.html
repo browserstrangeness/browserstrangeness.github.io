@@ -380,6 +380,9 @@ xel-ratio:0) {  .win10iepreviewmedia { background-color:#800;color:#fff; } }
 /* Firefox 6+ */
 @-moz-document regexp('*') { .ff6bup { background-color:#800;color:#fff; } }
 
+/* Firefox 62-63 */
+_::selection:-moz-tree-row(hover), .ff62-63 { background-color:#800;color:#fff; }
+
 /* Anything But Firefox 61- and Internet Explorer 8- */
 _::selection, :root .noffnoie8dn { background-color:#800;color:#fff; }
 
@@ -2216,6 +2219,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
+	<div class="styled_block">
+		<div class="base_grayed_out ff62-63">_::selection:-moz-tree-row(hover), .selector { property:value; }</div>
+		<div class="base_targets">Firefox 62-63</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+    
 	<div class="styled_block">
 		<div class="base_grayed_out ff50bup">_:any-link:-moz-tree-row(hover), .selector { property:value; }</div>
 		<div class="base_targets">Firefox 50+ (to 63)</div>
