@@ -464,6 +464,9 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 /* Internet Explorer (All but ie8) */
 @media \0screen\,screen\9, screen and (min-width:0\0) and (min-resolution:+72dpi) { .msie_allbut_ie8 { background-color:#800;color:#fff; } }
 
+/* Firefox 69+ */
+@supports selector(:-moz-is-html) { .ff69up { background-color:#800;color:#fff; } }
+	
 /* Firefox 49+ */
 @supports (-moz-appearance:none) and (text-align-last:auto) { .ff49up { background-color:#800;color:#fff; } }
 	
@@ -2200,7 +2203,13 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
  //-->
- 
+    
+	<div class="styled_block">
+		<div class="base_grayed_out ff49up">@supports  selector(:-moz-is-html) { .selector { property:value; } }</div>
+		<div class="base_targets">Firefox 69+</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
 	<div class="styled_block">
 		<div class="base_grayed_out ff50bup">_:any-link:-moz-tree-row(hover), .selector { property:value; }</div>
 		<div class="base_targets">Firefox 50-63</div>
@@ -4007,5 +4016,3 @@ Copyright &copy;2011-<script>document.write(new Date().getFullYear())</script> b
 
 </body>
 </html>
-
-    
