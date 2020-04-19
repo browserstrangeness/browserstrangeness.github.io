@@ -384,7 +384,7 @@ xel-ratio:0) {  .win10iepreviewmedia { background-color:#800;color:#fff; } }
 _:-moz-tree-row(hover), _::selection, .ff62-63 { background-color:#800;color:#fff; }
 
 /* Firefox 62 */
-_::selection, _:-moz-devtools-highlighted, :root .ff62 { background-color:#800;color:#fff; }
+_:-moz-devtools-highlighted, _::selection, :root .ff62 { background-color:#800;color:#fff; }
 
 /* Anything But Firefox 61- and Internet Explorer 8- */
 _::selection, :root .noffnoie8dn { background-color:#800;color:#fff; }
@@ -2238,7 +2238,7 @@ Author: Jeff Clayton
 	</div>
     
 	<div class="styled_block">
-		<div class="base_grayed_out ff62">_::selection, _:-moz-devtools-highlighted, :root .selector { property:value; }</div>
+		<div class="base_grayed_out ff62">_:-moz-devtools-highlighted, _::selection, :root .selector { property:value; }</div>
 		<div class="base_targets">Firefox 62</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
