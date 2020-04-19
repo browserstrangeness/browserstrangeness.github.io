@@ -398,6 +398,9 @@ _css-text, .noie6dn { background-color:#800;color:#fff; }
 /* Anything But Internet Explorer 7- */
 _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 
+/* Firefox 62 */
+@supports (-moz-appearance:none) and (image-orientation:90deg) { _::selection, .ff62 { background-color:#800;color:#fff; } }
+
 /* Firefox 49+ (Mac Only - OS X 10.9 Mavericks and up) */
 @supports (-moz-osx-font-smoothing:auto) and (text-align-last:auto) { .ff49macup { background-color:#800;color:#fff; } }
 
@@ -2237,6 +2240,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
     
+	<div class="styled_block">
+		<div class="base_grayed_out ff62">@supports (-moz-appearance:none) and (image-orientation:90deg) { _::selection, .selector { property:value; } }</div>
+		<div class="base_targets">Firefox 62</div>
+		<div class="base_credits">Authors: <a href="https://github.com/guillaume-simons" target="_blank">Guillaume Simons</a> &amp; <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
 	<!-- NOT WORKING div class="styled_block">
 		<div class="base_grayed_out ff62">_:-moz-devtools-highlighted, _::selection, :root .selector { property:value; }</div>
 		<div class="base_targets">Firefox 62</div>
