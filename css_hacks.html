@@ -398,6 +398,9 @@ _:lang(x), .noie7dn { background-color:#800;color:#fff; }
 /* Firefox 49+ (Mac Only - OS X 10.9 Mavericks and up) */
 @supports (-moz-osx-font-smoothing:auto) and (text-align-last:auto) { .ff49macup { background-color:#800;color:#fff; } }
 
+/* Firefox 63 */
+@media (-webkit-min-device-pixel-ratio:0) and (orientation) { _:-moz-tree-row(hover), .ff63 { background-color:#800;color:#fff; } }
+
 /* Firefox 49+ (Mac Only - OS X 10.9 Mavericks and up - alternate method) */
 @media screen and (-moz-overlay-scrollbars) { @supports (text-align-last:auto) { .ff49macupalt { background-color:#800;color:#fff; } } }
 
@@ -2219,6 +2222,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div> 
 
+	<div class="styled_block">
+		<div class="base_grayed_out ff63">@media screen and (-webkit-min-device-pixel-ratio:0) and (orientation) { _:-moz-tree-row(hover), .selector { property:value; } }</div>
+		<div class="base_targets">Firefox 63</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div> 
+   
 	<div class="styled_block">
 		<div class="base_grayed_out ff62-63">_:-moz-tree-row(hover), _::selection, .selector { property:value; }</div>
 		<div class="base_targets">Firefox 62-63</div>
