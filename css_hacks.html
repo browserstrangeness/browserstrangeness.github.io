@@ -690,6 +690,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (display:flow-root) { .saf13_nIOSup { background-color:#800;color:#fff; } } }
 	
 /* Safari 9+ */
+@supports (-webkit-hyphens:none) { .saf9hyup { background-color:#800;color:#fff; } }
+
+/* Safari 9+ */
 @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .s9upm { background-color:#800;color:#fff; } }
 
 /* Safari 9 iOS Only */
@@ -3158,6 +3161,12 @@ Author: Jeff Clayton
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
+	<div class="styled_block">
+		<div class="base_grayed_out saf9hyup">@supports (-webkit-hyphens:none) { .selector { property:value; } }</div>
+		<div class="base_targets">Safari 9+ [testing]</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
 <h2 style='clear:both;float:none;padding-top:10px;'>By Version</h2><br>
 	
 <h2 id="safari" style='clear:both;float:none;padding-top:20px;'>- Safari-Only CSS -</h2><br>
@@ -3842,7 +3851,7 @@ Author: Jeff Clayton
      
 	<div class="styled_block">
 		<div class="base_grayed_out c5s5">@media not all and (min-resolution:.001dpcm) { _::-webkit-inner-spin-button, .selector { property:value; } }</div>
-		<div class="base_targets">Safari 5.0, 10.1+,  Chrome 5</div>
+		<div class="base_targets">Safari 5.0, 10.1+, Chrome 5</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>       
      
@@ -4058,5 +4067,3 @@ Copyright &copy;2011-<script>document.write(new Date().getFullYear())</script> b
 
 </body>
 </html>
-
-    
