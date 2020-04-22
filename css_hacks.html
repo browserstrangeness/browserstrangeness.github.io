@@ -692,6 +692,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Safari 9+ */
 @supports (-webkit-hyphens:none) { .saf9hyup { background-color:#800;color:#fff; } }
 
+/* Any modern browser except safari */
+@supports (not (-webkit-hyphens:none)) { .notsafhy { background-color:#800;color:#fff; } }
+
 /* Safari 9+ */
 @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .s9upm { background-color:#800;color:#fff; } }
 
@@ -3089,7 +3092,13 @@ Author: Jeff Clayton
 		<div class="base_targets">iOS Blocker! (For Chrome 15+, Safari 5.1+, and Opera 14+) [If using Android, Requires OS & Browser 4.0+]</div>
 		<div class="base_credits">The iOS-Blocker Hack - Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
-
+        
+	<div class="styled_block">
+		<div class="base_grayed_out notsafh">@supports (not (-webkit-hyphens:none)) { .selector { property:value; } }</div>
+		<div class="base_targets">Any modern browser except Safari - Chrome 28+, Firefox 22+, MS Edge (all)</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+	
 	<div class="styled_block">
 		<div class="base_grayed_out webkitb">.selector:not(*:root) { property:value; }</div>
 		<div class="base_targets">Chrome and Safari (and Opera 14+)</div>
