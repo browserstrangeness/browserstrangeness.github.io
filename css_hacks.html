@@ -695,6 +695,9 @@ _:-moz-full-screen-ancestor, :root .ff10R11 { background-color:#800;color:#fff; 
 /* Any modern browser except safari */
 @supports (not (-webkit-hyphens:none)) { .notsafhy { background-color:#800;color:#fff; } }
 
+/* All MS Edge (Includes Chrome 28+) */
+@supports (not (-webkit-hyphens:none)) and (not (-moz-appearance:none) { .allmsedge { background-color:#800;color:#fff; } }
+
 /* Safari 9+ */
 @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .s9upm { background-color:#800;color:#fff; } }
 
@@ -1588,6 +1591,12 @@ Author: Jeff Clayton
 	<div class="styled_block">
 		<div class="base_grayed_out msedge12bup">_:-ms-lang(x), _:-webkit-full-screen, .selector { property:value; }</div>
 		<div class="base_targets">Microsoft Edge 12-18 (all EdgeHTML) Not Chromium</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+
+	<div class="styled_block">
+		<div class="base_grayed_out allmsedge">@supports (not (-webkit-hyphens:none)) and (not (-moz-appearance:none) { .selector { property:value; } }</div>
+		<div class="base_targets">All Microsoft Edge (Includes Chrome 28+)</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
 	</div>
 
