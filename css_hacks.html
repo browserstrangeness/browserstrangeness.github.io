@@ -78,6 +78,19 @@ body {
 	border-radius: 6px; /* w3c standard */
 }
 
+.detected_hilited {
+	background-color:#800;
+	color:#fff;
+	padding:4px;
+	padding-left:8px;
+	padding-right:8px;
+	font-weight:bold;
+	-webkit-border-radius: 6px; /* chrome and safari browsers */
+	-moz-border-radius: 6x; /* mozilla firefox */
+	-khtml-border-radius: 6px; /* some linux browsers */
+	border-radius: 6px; /* w3c standard */
+}
+
 .base_targets {
 	padding:4px;
 	padding-left:8px;
@@ -1363,7 +1376,9 @@ _:not(*:root), .webkita { background-color:#800;color:#fff; }
 /* Webkit browsers - non-ios (chrome 15+, safari 5.1+, Android browser 4+) */
 _:-webkit-full-screen-ancestor, :root .nonioswebkit { background-color:#800;color:#fff; }
 
-	
+/* Safari 11.0 Only */
+html >> * .safari_11_only { background-color:#800;color:#fff; }
+
 /* ie_test1 */
 @media, \0screen\,screen\9 { .ie_test1 { background-color:#800;color:#fff; } }
 
@@ -3208,6 +3223,12 @@ Author: Jeff Clayton
 		<div class="base_grayed_out saf11up">@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .selector { property:value; } } }</div>
 		<div class="base_targets">Safari 11+</div>
 		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a></div>
+	</div>
+       
+	<div class="styled_block">
+		<div class="base_grayed_out safari_11_only">html >> * .selector { property:value; }</div>
+		<div class="base_targets">Safari 11.0</div>
+		<div class="base_credits">Author: <a href="https://jeffclayton.wordpress.com/" target="_blank">Jeff Clayton</a> & <a href="https://webmechanic.biz/" target="_blank">WebMechanic</a></div>
 	</div>
 
 	<div class="styled_block">
