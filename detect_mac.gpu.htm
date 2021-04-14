@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script language="javascript" type="text/javascript">
+  
+var canvas_find_gpu = document.createElement('canvas');
+var gl_find_gpu;
+var debugInfo_find_gpu;
+var vendor_find_gpu;
+var renderer_find_gpu;
+
+try {
+  gl_find_gpu = canvas_find_gpu.getContext('webgl') || canvas_find_gpu.getContext('experimental-webgl');
+} catch (e) {
+}
+
+if (gl_find_gpu) {
+  debugInfo_find_gpu = gl_find_gpu.getExtension('WEBGL_debug_renderer_info');
+  vendor_find_gpu = gl_find_gpu.getParameter(debugInfo_find_gpu.UNMASKED_VENDOR_WEBGL);
+  renderer_find_gpu = gl_find_gpu.getParameter(debugInfo_find_gpu.UNMASKED_RENDERER_WEBGL);
+}
+
+</script>
+</head>
+<body>
+  
+</body>
+</html>
