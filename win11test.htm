@@ -1,0 +1,43 @@
+<html>
+<head>
+
+<script language="JavaScript">
+
+var windetect = "??";
+
+navigator.userAgentData.getHighEntropyValues(["platformVersion"])
+ .then(ua => {
+   if (navigator.userAgentData.platform === "Windows") {
+     const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
+     if (majorPlatformVersion >= 13) {
+       console.log("Windows 11 or later");
+       windetect = ">=11";
+      }
+      else if (majorPlatformVersion > 0) {
+        console.log("Windows 10");
+        windetect = "10";
+      }
+      else {
+        console.log("Before Windows 10");
+        windetect = "<10";
+      }
+   }
+   else {
+     console.log("Not running on Windows");
+     windetect = "not windows";
+   }
+ });
+
+</scriot>
+
+</head>
+<body>
+
+<script language="JavaScript">
+
+alert("windows version: "+windetect);
+
+</scriot>
+
+</body>
+</html>
