@@ -4,7 +4,7 @@
 <script language="JavaScript">
 
 var windetect = "??";
-
+ 
 navigator.userAgentData.getHighEntropyValues(["platformVersion"])
  .then(ua => {
    if (navigator.userAgentData.platform === "Windows") {
@@ -27,7 +27,14 @@ navigator.userAgentData.getHighEntropyValues(["platformVersion"])
      windetect = "not windows";
    }
  });
-
+ 
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+ 
+ alert("windows version: "+windetect);
+ 
+});
+ 
 </scriot>
 
 </head>
@@ -35,7 +42,7 @@ navigator.userAgentData.getHighEntropyValues(["platformVersion"])
 
 <script language="JavaScript">
 
-alert("windows version: "+windetect);
+//alert("windows version: "+windetect);
 
 </scriot>
 
