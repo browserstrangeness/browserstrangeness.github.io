@@ -39,14 +39,7 @@ var win11det = false;
    }
    
  }); /**/
-  
-//window.addEventListener('load', (event) => {
-  //console.log('page is fully loaded');
  
- //document.getElementById('WinType').innerHTML=windetxt;
- //alert("windows version: "+windetxt);
- 
-//});
 
 function docLoaded()
 {
@@ -56,10 +49,15 @@ function docLoaded()
  
 }  
  
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+  docLoaded();
+});
+ 
 </scriot>
 
 </head>
-<body onLoad="docLoaded();">
+<body onLoad="">
 
 <script language="JavaScript">
 
