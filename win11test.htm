@@ -13,7 +13,7 @@ var win11det = false;
 // win11 detection in edge/chrome/opera (not supported in firefox)
   
  navigator.userAgentData.getHighEntropyValues(["platformVersion"])
- .then(ua => { var divID = 'windet', windetxt = '';
+ .then(ua => { var divID = 'WinType', windetxt = '';
    if (navigator.userAgentData.platform === "Windows") {
      const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
      if (majorPlatformVersion >= 13) {
