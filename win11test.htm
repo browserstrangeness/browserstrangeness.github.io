@@ -16,7 +16,7 @@
 
 // win11 detection in edge/chrome/opera (not supported in firefox)
  
- var divID = 'WinType', windetxt = '---';
+ var windetxt = '';
  
  navigator.userAgentData.getHighEntropyValues(["platformVersion"])
  .then(ua => {
