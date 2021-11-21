@@ -3,13 +3,6 @@
 <head>
 
 <script language="javascript" type="text/javascript">
- 
-var win10det = false;
-var win11det = false;
- 
-</script>
- 
-<script language="javascript" type="text/javascript">
 
 // win11 detection in edge/chrome/opera (not supported in firefox)
  
@@ -17,15 +10,13 @@ var win11det = false;
  .then(ua => { var divID = 'WinType', windetxt = '';
    if (navigator.userAgentData.platform === "Windows") {
      const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
-     if (majorPlatformVersion >= 13) {
+     if (majorPlatformVersion >= 13) { // works in chrome-edge, chrome, 
         windetxt = "Windows 11+";
         console.log(windetxt);
-        win11det = true;
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10';
         console.log(windetxt);
-        win10det = true;
       }
       else {
         windetxt = 'Before Windows 10';
@@ -42,29 +33,21 @@ var win11det = false;
 
 function docLoaded()
 {
- console.log('docLoaded');
+ console.log('docLoaded'+windetxt);
  document.getElementById('WinType').innerHTML=windetxt;
  //alert("windows version: "+windetxt);
- 
 }  
  
 window.addEventListener('load', (event) => {
-  console.log('page is fully loaded');
   docLoaded();
 });
  
 </script>
 
 </head>
-<body onLoad="">
+<body>
 
-<script language="JavaScript">
-
-//alert("windows version: "+windetect);
-
-</script>
-
-<div id='WinType'>---</div> 
+<div id='WinType'>- - -</div> 
  
 </body>
 </html>
