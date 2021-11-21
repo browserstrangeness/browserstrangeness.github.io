@@ -3,11 +3,15 @@
 <head>
 
 <script language="javascript" type="text/javascript">
+ var divID = 'WinType', windetxt = '---';
+</script>
+
+<script language="javascript" type="text/javascript">
 
 // win11 detection in edge/chrome/opera (not supported in firefox)
  
  navigator.userAgentData.getHighEntropyValues(["platformVersion"])
- .then(ua => { var divID = 'WinType', windetxt = '';
+ .then(ua => {
    if (navigator.userAgentData.platform === "Windows") {
      const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
      if (majorPlatformVersion >= 13) { // works in chrome-edge, chrome, 
