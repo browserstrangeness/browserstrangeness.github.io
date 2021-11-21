@@ -24,11 +24,11 @@
      const majorPlatformVersion = parseInt(ua.platformVersion.split('.')[0]);
      if (majorPlatformVersion >= 13) { // works in chrome-edge, chrome, 
         windetxt = "Windows 11+"; console.log(windetxt);
-        document.getElementById("win11testbase").classList.add("win11");
+        document.getElementById("win11test").classList.add("win11");
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10'; console.log(windetxt);
-        document.getElementById("win10testbase").classList.add("win10");
+        document.getElementById("win10test").classList.add("win10");
       }
       else {
         windetxt = 'Before Windows 10'; console.log(windetxt);
