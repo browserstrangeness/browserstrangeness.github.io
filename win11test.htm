@@ -2,6 +2,18 @@
 <html>
 <head>
 
+<style type="">
+ 
+ .win10 {
+  color: #008;
+ }
+ 
+ .win11 {
+  color:#800;
+ }
+ 
+</style>
+ 
 <script language="javascript" type="text/javascript">
  var divID = 'WinType', windetxt = '---';
 </script>
@@ -17,10 +29,12 @@
      if (majorPlatformVersion >= 13) { // works in chrome-edge, chrome, 
         windetxt = "Windows 11+";
         console.log(windetxt);
+        document.getElementById("WinType").classList.add("win11");
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10';
         console.log(windetxt);
+        document.getElementById("WinType").classList.add("win10");
       }
       else {
         windetxt = 'Before Windows 10';
@@ -51,7 +65,7 @@ window.addEventListener('load', (event) => {
 </head>
 <body>
 
-<div id='WinType'>- - -</div> 
+<div id='WinType'>This is a test</div> 
  
 </body>
 </html>
