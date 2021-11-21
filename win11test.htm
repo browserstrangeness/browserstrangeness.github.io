@@ -5,22 +5,25 @@
 <style type="">
  
  .win10 {
-  color: #008;
+  background-color: #008;
+  color:#fff;
  }
  
  .win11 {
-  color:#800;
+  background-color: #008;
+  color:#fff;
  }
  
 </style>
  
 <script language="javascript" type="text/javascript">
- var divID = 'WinType', windetxt = '---';
 </script>
 
 <script language="javascript" type="text/javascript">
 
 // win11 detection in edge/chrome/opera (not supported in firefox)
+ 
+ var divID = 'WinType', windetxt = '---';
  
  navigator.userAgentData.getHighEntropyValues(["platformVersion"])
  .then(ua => {
@@ -29,12 +32,12 @@
      if (majorPlatformVersion >= 13) { // works in chrome-edge, chrome, 
         windetxt = "Windows 11+";
         console.log(windetxt);
-        document.getElementById("WinType").classList.add("win11");
+        document.getElementById("win11test").classList.add("win11");
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10';
         console.log(windetxt);
-        document.getElementById("WinType").classList.add("win10");
+        document.getElementById("win10test").classList.add("win10");
       }
       else {
         windetxt = 'Before Windows 10';
@@ -46,14 +49,12 @@
         console.log(windetxt);
    }
    
- }); /**/
- 
+ });
 
 function docLoaded()
 {
  console.log('docLoaded'+windetxt);
  document.getElementById('WinType').innerHTML=windetxt;
- //alert("windows version: "+windetxt);
 }  
  
 window.addEventListener('load', (event) => {
@@ -65,7 +66,9 @@ window.addEventListener('load', (event) => {
 </head>
 <body>
 
-<div id='WinType'>This is a test</div> 
+<div id='win10test'>Windows 10</div> 
+ 
+<div id='win11test'>Windows 11</div> 
  
 </body>
 </html>
