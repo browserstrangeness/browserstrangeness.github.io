@@ -3,7 +3,6 @@
 <head>
 
 <script language="javascript" type="text/javascript">
-console.log('starting...');
  
 var win10det = false;
 var win11det = false;
@@ -13,7 +12,7 @@ var win11det = false;
 <script language="javascript" type="text/javascript">
 
 // win11 detection in edge/chrome/opera (not supported in firefox)
-/*  
+ 
  navigator.userAgentData.getHighEntropyValues(["platformVersion"])
  .then(ua => { var divID = 'WinType', windetxt = '';
    if (navigator.userAgentData.platform === "Windows") {
@@ -44,7 +43,7 @@ var win11det = false;
 function docLoaded()
 {
  console.log('docLoaded');
- //document.getElementById('WinType').innerHTML=windetxt;
+ document.getElementById('WinType').innerHTML=windetxt;
  //alert("windows version: "+windetxt);
  
 }  
