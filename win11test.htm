@@ -4,11 +4,15 @@
 
 <style type="text/css">
  
- .win10testbase { color:#ccc; }
- .win11testbase { color:#ccc; }
+ .notwintestbase { color:#ccc; }
+ .winoldtestbase { color:#ccc; }
+ .win10testbase  { color:#ccc; }
+ .win11testbase  { color:#ccc; }
  
- .win10 { background-color: #800; color:#fff; }
- .win11 { background-color: #800; color:#fff; }
+ .notwin { background-color: #800; color:#fff; }
+ .winold { background-color: #800; color:#fff; }
+ .win10  { background-color: #800; color:#fff; }
+ .win11  { background-color: #800; color:#fff; }
  
 </style>
  
@@ -32,10 +36,12 @@
       }
       else {
         windetxt = 'Before Windows 10'; console.log(windetxt);
+        document.getElementById("winoldtest").classList.add("winold");
       }
    }
    else {
         windetxt = 'Not running on Windows'; console.log(windetxt);
+        document.getElementById("notwintest").classList.add("notwin");
    }
    
  });
@@ -55,8 +61,13 @@ window.addEventListener('load', (event) => {
 <body>
 
 <div>If one of these versions of Windows is detected in Edge 94+/Chrome 95+, or matching versions of Opera it will turn red.</div> 
+<div>This will also be able to tell if it is running on an older version of Windows (7 to 8.1) or a non-windows OS.</div> 
  
 <br />
+ 
+<div class='notwintestbase' id='notwin'>Not Windows</div> 
+
+<div class='winoldtestbase' id='winoldtest'>Windows < 10</div> 
  
 <div class='win10testbase' id='win10test'>Windows 10</div> 
  
