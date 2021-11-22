@@ -31,26 +31,30 @@
         //document.getElementById("win11test").classList.add("win11"); // add to a div
         //document.body.classList.add('win11'); // add to the body
         //document.getElementsByTagName('html')[0].className += ' '.'win11';
-        document.documentElement.className += ' '.'win11'; // add to the html element
+        //document.documentElement.className += ' '.'win11'; // add to the html element
+        document.documentElement.classList.add('win11'); // add to the html element
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10'; console.log(windetxt);
         //document.getElementById("win10test").classList.add("win10"); // add to a div
         //document.body.classList.add('win10'); // add to the body
-        document.getElementsByTagName('html')[0].className += ' '.'win10'; // add to the html element
+        //document.getElementsByTagName('html')[0].className += ' '.'win10'; // add to the html element
+        document.documentElement.classList.add('win10'); // add to the html element
       }
       else {
         windetxt = 'Before Windows 10'; console.log(windetxt);
         //document.getElementById("winoldtest").classList.add("winold"); // add to a div
         //document.body.classList.add('winold'); // add to the body
-        document.getElementsByTagName('html')[0].className += ' '.'winold'; // add to the html element
+        //document.getElementsByTagName('html')[0].className += ' '.'winold'; // add to the html element
+        document.documentElement.classList.add('winold'); // add to the html element
       }
    }
    else {
         windetxt = 'Not running on Windows'; console.log(windetxt);
         //document.getElementById("notwintest").classList.add("notwin"); // add to a div
         //document.body.classList.add('notwin'); // add to the body
-        document.getElementsByTagName('html')[0].className += ' '.'notwin'; // add to the html element
+        //document.getElementsByTagName('html')[0].className += ' '.'notwin'; // add to the html element
+        document.documentElement.classList.add('notwin'); // add to the html element
    }
    
  });
