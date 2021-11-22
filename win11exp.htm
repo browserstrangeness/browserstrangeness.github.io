@@ -77,7 +77,8 @@ function docLoaded() {
 }  
  
 window.addEventListener('load', (event) => {
-  docLoaded();
+ setTimeout(() => {docLoaded()}, 200);
+ //docLoaded();
 });
  
 </script>
