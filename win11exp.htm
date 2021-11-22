@@ -31,18 +31,21 @@
         //document.getElementById("win11test").classList.add("win11"); // add to a div
         //document.body.classList.add('win11'); // add to the body
         document.documentElement.classList.add('win11'); // add to the html element
+        document.getElementById('classtxt').value = "win11"; // display in text field
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10'; console.log(windetxt);
         //document.getElementById("win10test").classList.add("win10"); // add to a div
         //document.body.classList.add('win10'); // add to the body
         document.documentElement.classList.add('win10'); // add to the html element
+        document.getElementById('classtxt').value = "win10"; // display in text field
       }
       else {
         windetxt = 'Before Windows 10'; console.log(windetxt);
         //document.getElementById("winoldtest").classList.add("winold"); // add to a div
         //document.body.classList.add('winold'); // add to the body
         document.documentElement.classList.add('winold'); // add to the html element
+        document.getElementById('classtxt').value = "winold"; // display in text field
       }
    }
    else {
@@ -50,6 +53,7 @@
         //document.getElementById("notwintest").classList.add("notwin"); // add to a div
         //document.body.classList.add('notwin'); // add to the body
         document.documentElement.classList.add('notwin'); // add to the html element
+        document.getElementById('classtxt').value = "notwin"; // display in text field
    }
    
  });
@@ -105,6 +109,10 @@ window.addEventListener('load', (event) => {
 <div>Test Site 1: <a href='https://browserstrangeness.github.io/' target='_blank'>https://browserstrangeness.github.io</a></div>
  
 <div>Test Site 2: <a href='https://browserstrangeness.bitbucket.io/' target='_blank'>https://browserstrangeness.bitbucket.io</a></div>
+
+<form>
+<input id='classtxt' type="test" value='' />
+</form>
  
 </body>
 </html>
