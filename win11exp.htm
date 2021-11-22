@@ -61,6 +61,11 @@ function docLoaded() {
  console.log('win11.classList.length:'+document.getElementById("win11test").classList.length+' '+document.getElementById("win11test").classList);
  console.log('body.classList.length:'+document.body.classList.length+' '+document.body.classList);
  console.log('html.classList.length:'+document.documentElement.classList.length+' '+document.documentElement.classList);
+ 
+ if (document.getElementById("win11test").classList.indexOf('win11')!==-1) alert('div:win11 detected');
+ if (document.body.classList.indexOf('win11')!==-1) alert('body:win11 detected');
+ if (document.documentElement.classList.indexOf('win11')!==-1) alert('html:win11 detected');
+ 
  console.log('docLoaded '+windetxt);
  //document.getElementById('WinType').innerHTML=windetxt;
 }  
