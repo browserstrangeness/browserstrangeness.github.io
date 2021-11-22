@@ -31,8 +31,7 @@
         //document.getElementById("win11test").classList.add("win11"); // add to a div
         //document.body.classList.add('win11'); // add to the body
         //document.getElementsByTagName('html')[0].className += ' '.'win11';
-        rootElement = document.getElementsByTagName('html')[0];
-        rootElement.className += ' '.'win11'; // add to the html element
+        document.documentElement.className += ' '.'win11'; // add to the html element
       }
       else if (majorPlatformVersion > 0) {
         windetxt = 'Windows 10'; console.log(windetxt);
