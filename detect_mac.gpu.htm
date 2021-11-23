@@ -3,6 +3,21 @@
 <head>
 <meta charset="utf-8">
 <title></title>
+  
+<style type="text/css">
+  
+  .m1_detection_base {
+    background_color:#fff;
+    color:#ccc;
+  }
+  
+  .not_chrome_with_m1_base {
+    background_color:#800;
+    color:#fff;
+  }
+  
+</style>
+  
 <script language="javascript" type="text/javascript">
   
 var canvas_find_gpu = document.createElement('canvas');
@@ -10,23 +25,34 @@ var gl_find_gpu;
 var debugInfo_find_gpu;
 var vendor_find_gpu;
 var renderer_find_gpu;
+var m1_gpu_detected = false;
 
 try {
   gl_find_gpu = canvas_find_gpu.getContext('webgl') || canvas_find_gpu.getContext('experimental-webgl');
 } catch (e) {
 }
 
-if (gl_find_gpu) {
+if (gl_find_gpu) { // multiple methods of searching for gpu information
   debugInfo_find_gpu = gl_find_gpu.getExtension('WEBGL_debug_renderer_info');
   vendor_find_gpu = gl_find_gpu.getParameter(debugInfo_find_gpu.UNMASKED_VENDOR_WEBGL);
   renderer_find_gpu = gl_find_gpu.getParameter(debugInfo_find_gpu.UNMASKED_RENDERER_WEBGL);
 }
 
+if (renderer_find_gpu=='Apple M1') {
+  m1_gpu_detected = true;
+}
+  
 </script>
 </head>
 <body>
   
-  Test
-  
+<div>Google Chrome reports the Apple M1 GPU if found. Other browsers just report: Apple GPU (same as on MacIntel based machines)</div>  
+
+<br />
+
+<div id="m1_detection_base">Apple M1 Mac GPU Detected on Chrome Browser</div>
+
+<div id="not_chrome_with_m1_base">Not Apple M1 on Chrome Browser</div>
+
 </body>
 </html>
