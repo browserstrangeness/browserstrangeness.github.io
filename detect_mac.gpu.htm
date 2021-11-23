@@ -6,15 +6,11 @@
   
 <style type="text/css">
   
-  .m1_detection_base {
-    background_color:#fff;
-    color:#ccc;
-  }
+  .m1_detection_base { background_color:#fff; color:#ccc; }
+  .not_chrome_with_m1_base { background_color:#800; color:#fff; }
   
-  .not_chrome_with_m1_base {
-    background_color:#800;
-    color:#fff;
-  }
+  .m1_detected  { background-color: #800; color:#fff; }
+  .m1_not_detected  { background_color:#fff; color:#ccc; }
   
 </style>
   
@@ -50,9 +46,35 @@ if (renderer_find_gpu=='Apple M1') {
 
 <br />
 
-<div id="m1_detection_base">Apple M1 Mac GPU Detected on Chrome Browser</div>
+<div class="m1_detection_base" id="m1_detection_check">Apple M1 Mac GPU Detected on Chrome Browser</div>
 
-<div id="not_chrome_with_m1_base">Not Apple M1 on Chrome Browser</div>
+<div class="not_chrome_with_m1_base" id="m1_nondetection_check">Not Apple M1 on Chrome Browser</div>
 
+<script language="javascript" type="text/javascript">
+  
+  if (m1_gpu_detected)
+  {
+    document.getElementById("m1_detection_check").classList.add("m1_detected"); // add class to div
+    document.getElementById("m1_nondetection_check").classList.add("m1_not_detected"); // add class to div
+  }
+  
+</script>
+  
+<br />
+ 
+<div>GPU Detection Source: <a href='https://gist.github.com/cvan/042b2448fcecefafbb6a91469484cdf8#file-webgl-detect-gpu-js' target='_blank'>https://gist.github.com/cvan/042b2448fcecefafbb6a91469484cdf8#file-webgl-detect-gpu-js</a></div>
+ 
+<br />
+ 
+<div>Class injection test by Jeff Clayton</div> 
+ 
+<br />
+ 
+<div>Test Site 1: <a href='https://browserstrangeness.github.io/' target='_blank'>https://browserstrangeness.github.io</a></div>
+ 
+<div>Test Site 2: <a href='https://browserstrangeness.bitbucket.io/' target='_blank'>https://browserstrangeness.bitbucket.io</a></div>
+
+<br />
+  
 </body>
 </html>
