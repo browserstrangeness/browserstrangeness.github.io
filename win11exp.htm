@@ -20,8 +20,9 @@
  
 // win11 detection in edge/chrome/opera (not supported in firefox)
  
- var windetxt = '';
+var windetxt = '';
  
+if (typeof navigator.userAgentData !== 'undefined') {
  navigator.userAgentData.getHighEntropyValues(["platformVersion"])
  .then(ua => {
    if (navigator.userAgentData.platform === "Windows") {
@@ -54,10 +55,10 @@
         //document.body.classList.add('notwin'); // add to the body
         document.documentElement.classList.add('notwin'); // add to the html element
         document.getElementById('classtxt').value = "notwin"; // display in text field
-   }
-   
+   } 
  });
-
+}
+ 
 function docLoaded() {
  console.log('notwin.classList.length:'+document.getElementById("notwintest").classList.length+' '+document.getElementById("notwintest").classList);
  console.log('winold.classList.length:'+document.getElementById("winoldtest").classList.length+' '+document.getElementById("winoldtest").classList);
