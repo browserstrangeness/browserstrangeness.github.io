@@ -5,14 +5,22 @@
 <title>Detect MS Edge</title>
 <style type="text/css">
 
-.msedge {
+.msedge1, .msedge2 {
   background-color:#ccc;
   color:#fff;
 }
 
 @supports (display:-ms-grid) {
-  .msedge {
-    background-color:#800;
+  .msedge1 {
+    background-color:#800; /* red */
+    color:#fff;
+  }
+}
+  
+@container (min-width: 1px)
+{
+  .msedge2 {
+    background-color:#808; /* purple */
     color:#fff;
   }
 }
@@ -22,7 +30,8 @@
 
 <body>
 
-<div class="msedge">If this is red, this is Microsoft Edge.</div>
+<div class="msedge1">If this is red, this is Microsoft Edge.</div>
+<div class="msedge2">If this is purple, this is Microsoft Edge.</div>
 
 </body>
 </html>
