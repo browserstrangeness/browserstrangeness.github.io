@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -19,7 +20,7 @@
   
 @supports (container:none) {
   .msedge2 {
-    background-color:#008; /* navy */
+    background-color:#008; /* navy - this one works for ms edge and chrome 105 */
     color:#fff;
   }
 }
@@ -32,6 +33,13 @@
   }
 }
 
+@supports (font-palette:normal) {
+  .msedge4 {
+    background-color:#00F; /* blue */
+    color:#fff;
+  }
+}
+ 
 </style>
 </head>
 
@@ -40,6 +48,7 @@
 <div class="msedge1">If this is red, this is Microsoft Edge.</div>
 <div class="msedge2">If this is navy blue, this is Microsoft Edge.</div>
 <div class="msedge3">If this is purple, this is Microsoft Edge.</div>
+<div class="msedge4">If this is blue, this is NOT Microsoft Edge.</div>
 
 </body>
 </html>
