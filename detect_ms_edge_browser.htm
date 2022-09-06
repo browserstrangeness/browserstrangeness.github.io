@@ -41,6 +41,14 @@
 }
  
 </style>
+<script language="javascript">
+  
+var isEdge = (function() {
+  var agent = window.navigator.userAgent.toLowerCase();
+  return (agent.indexOf("windows") > -1 && agent.indexOf("safari") > -1)?true:false;
+})();
+  
+</script>
 </head>
 
 <body>
@@ -50,5 +58,10 @@
 <div class="msedge3">If this is purple, this is Microsoft Edge. NO</div>
 <div class="msedge4">If this is blue, this should NOT be Microsoft Edge. Shows in EDGE and CHROME</div>
 
+<script language="javascript">
+  
+alert("browser is " + (isEdge?'':'NOT ') + "MS Edge");
+  
+</script>
 </body>
 </html>
