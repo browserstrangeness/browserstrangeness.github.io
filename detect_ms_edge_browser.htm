@@ -45,7 +45,8 @@
   
 var isEdge = (function() {
   var agent = window.navigator.userAgent.toLowerCase();
-  return (agent.indexOf("windows") > -1 && agent.indexOf("safari") > -1)?true:false;
+  return (agent.indexOf("windows") > -1 && agent.indexOf("safari") > -1 && agent.indexOf("edg/") > -1 && agent.indexOf("edge/") > -1)?true:false;
+  //return (agent.indexOf("windows") > -1 && agent.indexOf("safari") > -1)?true:false; // chrome & edge
 })();
   
 </script>
