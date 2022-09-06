@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Detect MS Edge</title>
+<style type="text/css">
+
+.msedge {
+  background-color:#ccc;
+  color:#fff;
+}
+
+@supports (display:-ms-grid) {
+  .msedge {
+    background-color:#800;
+    color:#fff;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="msedge">If this is red, this is Microsoft Edge.</div>
+
+</body>
+</html>
