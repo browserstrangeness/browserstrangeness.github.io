@@ -6,7 +6,7 @@
 <title>Detect MS Edge</title>
 <style type="text/css">
 
-.msedge1, .msedge2, .msedge3, .msedge4 {
+.msedge_js, .msedge1, .msedge2, .msedge3, .msedge4 {
   background-color:#ccc;
   color:#fff;
 }
@@ -40,9 +40,14 @@
   }
 }
  
+.msedge_js {
+  background-color:#f00;
+  color:#fff;
+}
+
 </style>
 <script language="javascript">
-
+  
 var isEdge = (function() {
   var ua = window.navigator.userAgent.toLowerCase();
   return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
@@ -59,7 +64,12 @@ var isEdge = (function() {
 <div class="msedge3">If this is purple, this is Microsoft Edge. NO</div>
 <div class="msedge4">If this is blue, this shows in EDGE, CHROME, and SAFARI</div>
 
+<div id="msedge_jstest">If this is red, JavaScript says this is Microsoft Edge.</div>
+
 <script language="javascript"> // only the js separates edge and chrome at this time
+
+var element = document.getElementById("msedge_jstest");
+element.classList.add("msedge_js");
   
 alert("browser is " + (isEdge?'':'NOT ') + "MS Edge");
   
