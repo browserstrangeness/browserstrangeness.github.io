@@ -59,9 +59,9 @@ var isEdge = (function() {
 
 <body>
 
-<div class="msedge1">If this is red, this is Microsoft Edge. NO</div>
+<div class="msedge1">If this is red, this is Microsoft Edge. NON-WORKING OR TOO OLD</div>
 <div class="msedge2">If this is navy blue, this is Microsoft Edge or Chrome.</div>
-<div class="msedge3">If this is purple, this is Microsoft Edge. NO</div>
+<div class="msedge3">If this is purple, this is Microsoft Edge. NON-WORKING OR TOO OLD</div>
 <div class="msedge4">If this is blue, this shows in EDGE, CHROME, and SAFARI</div>
 
 <div id="msedge_jstest" class="msedge_jstest">If this is red, JavaScript says this is Microsoft Edge.</div>
@@ -71,7 +71,7 @@ var isEdge = (function() {
 var element = document.getElementById("msedge_jstest");
 if (isEdge) element.classList.add("msedge_js");
   
-alert("browser is " + (isEdge?'':'NOT ') + "MS Edge");
+//alert("browser is " + (isEdge?'':'NOT ') + "MS Edge"); // this works properly for testing
   
 </script>
 </body>
