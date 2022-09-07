@@ -102,14 +102,18 @@ if (isEdge) el.classList.add("msedge_js");
 <p>&nbsp;</p>
 
 <code><pre>
-  
+&lt;script&gt;
+
 var isEdge = (function() {
 var ua = window.navigator.userAgent.toLowerCase();
 return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
 })();
+
 var el = document.getElementById("msedge_jstest");
 if (isEdge) el.classList.add("msedge_js");
-  
+
+&lt;/script&gt;
+
 </pre></code>
 
 </body>
