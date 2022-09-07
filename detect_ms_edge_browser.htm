@@ -71,7 +71,7 @@ if (isEdge) el.classList.add("msedge_js");
 
 var isEdge = (function() {
 var ua = window.navigator.userAgent.toLowerCase();
-return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
+return (ua.indexOf("windows") > -1 && ua.indexOf("edg/") > -1)?true:false;
 })();
 
 var el = document.getElementById("my_test_div");
