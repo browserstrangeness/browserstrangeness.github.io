@@ -23,7 +23,7 @@ var isEdge = (function() {
   var ua = window.navigator.userAgent.toLowerCase();
   return (ua.indexOf("windows") > -1 && ua.indexOf("edg/") > -1)?true:false;
 })();
-  
+
 </script>
 </head>
 
@@ -34,8 +34,12 @@ var isEdge = (function() {
 <script language="javascript"> // only the js separates edge and chrome at this time
 
 var el = document.getElementById("my_test_div");
-if (isEdge) el.classList.add("msedge_js");
+//if (isEdge) el.classList.add("msedge_js");
   
+if (/Edg\//.test(navigator.userAgent) && /Windows/.test(navigator.userAgent)) {
+  document.getElementById("my_test_div").classList.add("msedge_js");
+}
+
 //alert("browser is " + (isEdge?'':'NOT ') + "MS Edge"); // this works properly for testing
   
 </script>
@@ -71,7 +75,7 @@ if (isEdge) el.classList.add("msedge_js");
 
 var isEdge = (function() {
 var ua = window.navigator.userAgent.toLowerCase();
-return (ua.indexOf("windows") > -1 && ua.indexOf("edg/") > -1)?true:false;
+return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
 })();
 
 var el = document.getElementById("my_test_div");
