@@ -64,11 +64,11 @@ var isEdge = (function() {
 <div class="msedge3">If this is purple, this is Microsoft Edge. NON-WORKING</div>
 <div class="msedge4">If this is blue, this shows in EDGE, CHROME, and SAFARI</div>
 
-<div id="msedge_jstest" class="msedge_jstest">If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]</div>
+<div id="my_test_div" class="msedge_jstest">If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]</div>
 
 <script language="javascript"> // only the js separates edge and chrome at this time
 
-var el = document.getElementById("msedge_jstest");
+var el = document.getElementById("my_test_div");
 if (isEdge) el.classList.add("msedge_js");
   
 //alert("browser is " + (isEdge?'':'NOT ') + "MS Edge"); // this works properly for testing
@@ -95,7 +95,7 @@ if (isEdge) el.classList.add("msedge_js");
 
 <code><pre>
   
-&lt;div id="msedge_jstest" class="msedge_jstest"&gt;If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]&lt;/div&gt;
+&lt;div id="my_test_div" class="msedge_jstest"&gt;If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]&lt;/div&gt;
   
 </pre></code>
 
@@ -109,7 +109,7 @@ var ua = window.navigator.userAgent.toLowerCase();
 return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
 })();
 
-var el = document.getElementById("msedge_jstest");
+var el = document.getElementById("my_test_div");
 if (isEdge) el.classList.add("msedge_js");
 
 &lt;/script&gt;
