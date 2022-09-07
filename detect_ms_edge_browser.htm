@@ -69,7 +69,7 @@ var isEdge = (function() {
 <script language="javascript"> // only the js separates edge and chrome at this time
 
 var element = document.getElementById("msedge_jstest");
-element.classList.add("msedge_js");
+if (isEdge) element.classList.add("msedge_js");
   
 alert("browser is " + (isEdge?'':'NOT ') + "MS Edge");
   
