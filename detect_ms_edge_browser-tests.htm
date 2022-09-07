@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Detect MS Edge</title>
+<style type="text/css">
+
+.msedge_jstest, .msedge1, .msedge2, .msedge3, .msedge4 {
+  background-color:#ccc;
+  color:#fff;
+}
+
+@supports (display:-ms-grid) {
+  .msedge1 {
+    background-color:#800; /* red */
+    color:#fff;
+  }
+}
+  
+@supports (container:none) {
+  .msedge2 {
+    background-color:#008; /* navy - this one works for ms edge and chrome 105 */
+    color:#fff;
+  }
+}
+ 
+@container (min-width: 1px)
+{
+  .msedge3 {
+    background-color:#808; /* purple */
+    color:#fff;
+  }
+}
+
+@supports (font-palette:normal) {
+  .msedge4 {
+    background-color:#00F; /* blue */
+    color:#fff;
+  }
+}
+ 
+.msedge_js {
+  background-color:#f00;
+  color:#fff;
+}
+
+</style>
+<script language="javascript">
+  
+var isEdge = (function() {
+  var ua = window.navigator.userAgent.toLowerCase();
+  return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
+  //return (ua.indexOf("windows") > -1 && ua.indexOf("safari") > -1)?true:false; // chrome, safari & edge testing
+})();
+  
+</script>
+</head>
+
+<body>
+
+<div class="msedge1">If this is red, this is Microsoft Edge. NOT WORKING TOO OLD</div>
+<div class="msedge2">If this is navy blue, this is Microsoft Edge or Chrome.</div>
+<div class="msedge3">If this is purple, this is Microsoft Edge. NON-WORKING</div>
+<div class="msedge4">If this is blue, this shows in EDGE, CHROME, and SAFARI</div>
+
+<div id="my_test_div" class="msedge_jstest">If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]</div>
+
+<script language="javascript"> // only the js separates edge and chrome at this time
+
+var el = document.getElementById("my_test_div");
+if (isEdge) el.classList.add("msedge_js");
+  
+//alert("browser is " + (isEdge?'':'NOT ') + "MS Edge"); // this works properly for testing
+  
+</script>
+
+<code><pre>
+&lt;style&gt;
+  
+.msedge_jstest {
+  background-color:#ccc;
+  color:#fff;
+}
+
+.msedge_js {
+  background-color:#f00;
+  color:#fff;
+}
+
+&lt;/style&gt;
+</pre></code>
+  
+<p>&nbsp;</p>
+
+<code><pre>
+  
+&lt;div id="my_test_div" class="msedge_jstest"&gt;If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]&lt;/div&gt;
+  
+</pre></code>
+
+<p>&nbsp;</p>
+
+<code><pre>
+&lt;script&gt;
+
+var isEdge = (function() {
+var ua = window.navigator.userAgent.toLowerCase();
+return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
+})();
+
+var el = document.getElementById("my_test_div");
+if (isEdge) el.classList.add("msedge_js");
+
+&lt;/script&gt;
+
+</pre></code>
+
+</body>
+</html>
