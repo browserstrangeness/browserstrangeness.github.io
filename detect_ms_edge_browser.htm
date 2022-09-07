@@ -74,5 +74,43 @@ if (isEdge) el.classList.add("msedge_js");
 //alert("browser is " + (isEdge?'':'NOT ') + "MS Edge"); // this works properly for testing
   
 </script>
+
+<code><pre>
+&lt;style&gt;
+  
+.msedge_jstest {
+  background-color:#ccc;
+  color:#fff;
+}
+
+.msedge_js {
+  background-color:#f00;
+  color:#fff;
+}
+
+&lt;/style&gt;
+</pre></code>
+  
+<p>&nbsp;</p>
+
+<code><pre>
+  
+&lt;div id="msedge_jstest" class="msedge_jstest"&gt;If this is red, JavaScript says this is Microsoft Edge. [THIS WORKS IN FALL 2022]&lt;/div&gt;
+  
+</pre></code>
+
+<p>&nbsp;</p>
+
+<code><pre>
+  
+var isEdge = (function() {
+var ua = window.navigator.userAgent.toLowerCase();
+return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
+})();
+var el = document.getElementById("msedge_jstest");
+if (isEdge) el.classList.add("msedge_js");
+  
+</pre></code>
+
 </body>
 </html>
