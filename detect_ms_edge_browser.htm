@@ -42,11 +42,11 @@
  
 </style>
 <script language="javascript">
-  
+
 var isEdge = (function() {
-  var agent = window.navigator.userAgent.toLowerCase();
-  return (agent.indexOf("windows") > -1 && (agent.indexOf("edg/") > -1 || agent.indexOf("edge/") > -1))?true:false;
-  //return (agent.indexOf("windows") > -1 && agent.indexOf("safari") > -1)?true:false; // chrome, safari & edge testing
+  var ua = window.navigator.userAgent.toLowerCase();
+  return (ua.indexOf("windows") > -1 && (ua.indexOf("edg/") > -1 || ua.indexOf("edge/") > -1))?true:false;
+  //return (ua.indexOf("windows") > -1 && ua.indexOf("safari") > -1)?true:false; // chrome, safari & edge testing
 })();
   
 </script>
